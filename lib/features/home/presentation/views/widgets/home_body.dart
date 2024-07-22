@@ -1,6 +1,12 @@
+import 'dart:developer';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
-import 'package:what_if/core/utils/fonts.dart';
+import 'package:what_if/core/utils/components/custom_gradient_button.dart';
+import 'package:what_if/core/utils/styles.dart';
+import 'dart:ui' as ui;
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -9,27 +15,64 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Center(
-          child: SizedBox(
-            height: mediaQuery.height * 0.123,
-            width: mediaQuery.width * 0.6,
-            child: const CustomGradientWidget(
+        SizedBox(height: mediaQuery.height * 0.07),
+        const Expanded(
+          flex: 2,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 80),
+            child: CustomGradientWidget(
               child: Text(
                 'WHATIF?!',
-                style: TextStyle(
-                  fontFamily: Fonts.moulFontFamily,
-                  fontSize: 56,
-                  fontWeight: FontWeight.w400,
-                  height: 0.9,
-                  color: Colors.white,
-                ),
+                style: Styles.textStyle56,
                 textAlign: TextAlign.center,
+                textDirection: ui.TextDirection.ltr,
               ),
             ),
           ),
         ),
+        const Spacer(flex: 7),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 75),
+          child: CustomGradientButton(
+            text: AppStrings.letsPlay.tr(),
+            onTap: () {},
+            enableBorderRadius: false,
+          ),
+        ),
+        const Spacer(flex: 1),
+        Row(
+          children: [
+            SizedBox(width: mediaQuery.width * 0.05),
+            Expanded(
+              child: CustomGradientButton(
+                text: AppStrings.settings.tr(),
+                onTap: () {
+                  if (context.locale.toString() ==
+                      AppStrings.languageCodes[0]) {
+                    context.setLocale(
+                      Locale(AppStrings.languageCodes[1]),
+                    );
+                  } else {
+                    context.setLocale(
+                      Locale(AppStrings.languageCodes[0]),
+                    );
+                  }
+                  log(context.locale.toString());
+                },
+              ),
+            ),
+            SizedBox(width: mediaQuery.width * 0.05),
+            Expanded(
+              child: CustomGradientButton(
+                text: AppStrings.howToPlay.tr(),
+                onTap: () {},
+              ),
+            ),
+            SizedBox(width: mediaQuery.width * 0.05),
+          ],
+        ),
+        SizedBox(height: mediaQuery.height * 0.07),
       ],
     );
   }

@@ -16,20 +16,20 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
+  flutter_bounceable: ^1.1.0
   flutter_svg: ^2.0.10+1
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/Logo.png"
   min_sdk_android: 21
-
 
 flutter:
 
@@ -40,7 +40,6 @@ flutter:
     - assets/images/
     - assets/svg/
     - assets/translations/
-
 
   # fonts:
   fonts:
@@ -68,5 +67,3 @@ flutter:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Medium.ttf
         - asset: assets/fonts/Roboto-Italic.ttf
-        
-  
