@@ -8,6 +8,8 @@ import 'package:what_if/core/utils/components/custom_gradient_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'dart:ui' as ui;
 
+import '../../../../../config/routes/route_name.dart';
+
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
 
@@ -36,7 +38,9 @@ class HomeBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 75),
           child: CustomGradientButton(
             text: AppStrings.letsPlay.tr(),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, RoutesName.catagoriesView);
+            },
             enableBorderRadius: false,
           ),
         ),

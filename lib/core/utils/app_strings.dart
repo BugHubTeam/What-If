@@ -3,4 +3,5 @@ class AppStrings {
   static const String letsPlay = 'letsPlay';
   static const String settings = 'settings';
   static const String howToPlay = 'howToPlay';
+  static const String catagories = 'catagories';
 }

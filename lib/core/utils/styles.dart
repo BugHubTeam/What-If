@@ -17,4 +17,12 @@ class Styles {
     height: 0.9,
     color: Colors.white,
   );
+
+  static const TextStyle textStyle24 = TextStyle(
+    fontFamily: Fonts.moulFontFamily,
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    height: 0.9,
+    color: Colors.white,
+  );
 }
