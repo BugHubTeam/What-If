@@ -53,4 +53,22 @@ class AppColors {
     Color(0XFF04B2DE),
     Color(0XFF01BEE6),
   ];
+
+  static const List<Color> categotyBgGradientColors = [
+    Color(0XFF2A1969),
+    Color(0XFF8BDAF3),
+  ];
+
+  static const BoxShadow catagorieBoxShadow = BoxShadow(
+    color: Colors.white,
+    blurRadius: 4,
+    spreadRadius: 0,
+    offset: Offset(0, 4),
+  );
+
+  static const List<Color> catagoryTitelGradientColors = [
+    Color(0XFFC31F93),
+    Color(0XFF882FCC),
+    Color(0XFF8BDAF3),
+  ];
 }

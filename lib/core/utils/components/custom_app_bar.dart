@@ -12,29 +12,32 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          padding: EdgeInsets.zero,
-          icon: const Icon(
-            Icons.arrow_back,
-            size: 37,
-            color: Colors.white,
+    return Container(
+      margin: const EdgeInsets.only(top: 55, bottom: 22),
+      child: Row(
+        children: [
+          IconButton(
+            padding: EdgeInsets.zero,
+            icon: const Icon(
+              Icons.arrow_back,
+              size: 37,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        const Spacer(flex: 1),
-        CustomGradientWidget(
-          child: Text(
-            title.tr(),
-            style: Styles.textStyle24,
-            textAlign: TextAlign.center,
+          const Spacer(flex: 1),
+          CustomGradientWidget(
+            child: Text(
+              title.tr(),
+              style: Styles.textStyle24,
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        const Spacer(flex: 1),
-      ],
+          const Spacer(flex: 1),
+        ],
+      ),
     );
   }
 }

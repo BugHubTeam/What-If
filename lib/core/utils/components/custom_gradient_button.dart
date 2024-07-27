@@ -10,11 +10,13 @@ class CustomGradientButton extends StatelessWidget {
     this.onTap,
     required this.text,
     this.enableBorderRadius = true,
+    this.iconImage,
   });
   final String text;
   final bool? enableButton2;
   final bool? enableBorderRadius;
   final void Function()? onTap;
+  final String? iconImage;
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +56,16 @@ class CustomGradientButton extends StatelessWidget {
               ),
             ),
             child: Center(
-              child: Text(
-                text,
-                style: Styles.textStyle16,
-                textAlign: TextAlign.center,
-              ),
+              child: iconImage == null
+                  ? Text(
+                      text,
+                      style: Styles.textStyle16,
+                      textAlign: TextAlign.center,
+                    )
+                  : Image.asset(
+                      iconImage!,
+                      fit: BoxFit.fill,
+                    ),
             ),
           ),
         ),

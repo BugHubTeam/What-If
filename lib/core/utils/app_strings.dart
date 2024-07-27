@@ -4,4 +4,7 @@ class AppStrings {
   static const String settings = 'settings';
   static const String howToPlay = 'howToPlay';
   static const String catagories = 'catagories';
+  static const String footBall= 'footBall';
+  static const String tv= 'tv';
+  static const String political= 'political';
 }
