@@ -17,6 +17,12 @@ class Styles {
     height: 0.9,
     color: Colors.white,
   );
+  static const TextStyle textStyle16Inter = TextStyle(
+    fontFamily: Fonts.interFontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
 
   static const TextStyle textStyle24 = TextStyle(
     fontFamily: Fonts.moulFontFamily,
@@ -24,5 +30,11 @@ class Styles {
     fontWeight: FontWeight.w400,
     height: 0.9,
     color: Colors.white,
+  );
+  static const TextStyle textStyle12 = TextStyle(
+    fontFamily: Fonts.moulFontFamily,
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
   );
 }

@@ -5,5 +5,10 @@
     "catagories": "الفئات",
     "footBall": "كره القدم",
     "tv": "عرض تلفزيوني",
-    "political": "سياسي"
+    "political": "سياسي",
+    "pleaseChooseYourLanguage": "الرجاء اختيار اللغة \n الخاصة بك..",
+    "englishUK": "الإنجليزية (الولايات المتحدة)",
+    "arabicEG": "العربية(مصر)",
+    "yourLanguagePreference": "يمكن تغيير تفضيلات اللغة الخاصة  \n بك في أي وقت في \n الإعدادات",
+    "continueSTR": "أكمل"
 }

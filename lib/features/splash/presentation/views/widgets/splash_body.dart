@@ -15,7 +15,7 @@ class SplashBody extends StatelessWidget {
           child: AnimatedSplashScreen(
             nextScreen: const HomeView(),
             splash: AppImages.logo,
-            animationDuration: const Duration(milliseconds: 3000),
+            animationDuration: const Duration(milliseconds: 2300),
             splashTransition: SplashTransition.sizeTransition,
             backgroundColor: Colors.transparent,
             splashIconSize: 300,

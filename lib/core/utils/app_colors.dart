@@ -53,6 +53,25 @@ class AppColors {
     Color(0XFF04B2DE),
     Color(0XFF01BEE6),
   ];
+  static const List<Color> textGradientColors = [
+    Color(0XFF1A62A9),
+    Color(0XFF243E91),
+    Color(0XFF310F72),
+    Color(0XFF2B2480),
+    Color(0XFF0E90C7),
+    Color(0XFF301476),
+    Color(0XFF310F72),
+    Color(0XFF301173),
+    Color(0XFF2E1878),
+    Color(0XFF2B2580),
+    Color(0XFF26378C),
+    Color(0XFF204E9C),
+    Color(0XFF186AAE),
+    Color(0XFF0F8CC5),
+    Color(0XFF04B2DE),
+    Color(0XFF01BEE6),
+    Color(0XFF01BEE6),
+  ];
 
   static const List<Color> categotyBgGradientColors = [
     Color(0XFF2A1969),
@@ -61,6 +80,20 @@ class AppColors {
 
   static const BoxShadow catagorieBoxShadow = BoxShadow(
     color: Colors.white,
+    blurRadius: 4,
+    spreadRadius: 0,
+    offset: Offset(0, 4),
+  );
+
+  static const BoxShadow settingsBoxShadow = BoxShadow(
+    color: Color(0XFFC0FCFF),
+    blurRadius: 4,
+    spreadRadius: 0,
+    offset: Offset(0, 4),
+  );
+
+  static const BoxShadow selectLangBoxShadow = BoxShadow(
+    color: Color(0XFF000000),
     blurRadius: 4,
     spreadRadius: 0,
     offset: Offset(0, 4),

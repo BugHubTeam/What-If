@@ -3,7 +3,12 @@
     "settings": "Settings",
     "howToPlay": "How to play",
     "catagories": "Catagories",
-    "footBall":"FootBall",
-    "tv":"Tv Shows",
-    "political": "Political"
+    "footBall": "FootBall",
+    "tv": "Tv Shows",
+    "political": "Political",
+    "pleaseChooseYourLanguage": "Please Choose Your \nLanguage..",
+    "englishUK": "English (United States)",
+    "arabicEG": "Arabic (Egypt)",
+    "yourLanguagePreference":"Your language preference \ncan be changed at any \ntime in setting",
+    "continueSTR":"Continue"
 }

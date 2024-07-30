@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -7,7 +6,6 @@ import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'dart:ui' as ui;
-
 import '../../../../../config/routes/route_name.dart';
 
 class HomeBody extends StatelessWidget {
@@ -25,7 +23,7 @@ class HomeBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 80),
             child: CustomGradientWidget(
               child: Text(
-                'WHATIF?!',
+                AppStrings.whatIf,
                 style: Styles.textStyle56,
                 textAlign: TextAlign.center,
                 textDirection: ui.TextDirection.ltr,
@@ -52,17 +50,7 @@ class HomeBody extends StatelessWidget {
               child: CustomGradientButton(
                 text: AppStrings.settings.tr(),
                 onTap: () {
-                  if (context.locale.toString() ==
-                      AppStrings.languageCodes[0]) {
-                    context.setLocale(
-                      Locale(AppStrings.languageCodes[1]),
-                    );
-                  } else {
-                    context.setLocale(
-                      Locale(AppStrings.languageCodes[0]),
-                    );
-                  }
-                  log(context.locale.toString());
+                  Navigator.pushNamed(context, RoutesName.settingsView);
                 },
               ),
             ),

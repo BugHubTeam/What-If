@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:what_if/config/routes/route_name.dart';
 import 'config/routes/routes.dart';
 
+GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  
+
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('ar'), Locale('en')],
