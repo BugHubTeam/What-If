@@ -32,6 +32,8 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         const Spacer(flex: 7),
+
+        //lets play
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 75),
           child: CustomGradientButton(
@@ -46,6 +48,8 @@ class HomeBody extends StatelessWidget {
         Row(
           children: [
             SizedBox(width: mediaQuery.width * 0.05),
+
+            //settings
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.settings.tr(),
@@ -55,10 +59,14 @@ class HomeBody extends StatelessWidget {
               ),
             ),
             SizedBox(width: mediaQuery.width * 0.05),
+
+            //how to play
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.howToPlay.tr(),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, RoutesName.howToPlayView);
+                },
               ),
             ),
             SizedBox(width: mediaQuery.width * 0.05),

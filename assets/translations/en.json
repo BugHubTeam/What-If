@@ -9,6 +9,16 @@
     "pleaseChooseYourLanguage": "Please Choose Your \nLanguage..",
     "englishUK": "English (United States)",
     "arabicEG": "Arabic (Egypt)",
-    "yourLanguagePreference":"Your language preference \ncan be changed at any \ntime in setting",
-    "continueSTR":"Continue"
+    "yourLanguagePreference": "Your language preference \ncan be changed at any \ntime in setting",
+    "continueSTR": "Continue",
+    "selectACategory": "Select a Category",
+    "chooseFromOptions": "Choose from options \nlike Football or TV \nShows.",
+    "chooseAFocus": "Choose a Focus",
+    "decideWhetherYouWant": "Decide whether you want to \ncreate a story about a Club, \nPlayer, or Movie.",
+    "answer5Questions": "Answer 5 Questions",
+    "provideResponsesTo": "Provide responses to \nthe five questions \npresented.",
+    "generateYourStory": "Generate Your Story",
+    "askAItoCreateTheStory": "Ask AI to create the \nstory based on your \ninputs.",
+    "shareTheStory": "Share the Story",
+    "shareTheGeneratedStory": "Share the generated \nstory with your \nfriends."
 }

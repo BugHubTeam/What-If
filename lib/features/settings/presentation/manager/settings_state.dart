@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+part of 'settings_cubit.dart';
 
 abstract class SettingsState extends Equatable {
   const SettingsState();

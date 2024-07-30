@@ -10,5 +10,15 @@
     "englishUK": "الإنجليزية (الولايات المتحدة)",
     "arabicEG": "العربية(مصر)",
     "yourLanguagePreference": "يمكن تغيير تفضيلات اللغة الخاصة  \n بك في أي وقت في \n الإعدادات",
-    "continueSTR": "أكمل"
+    "continueSTR": "أكمل",
+    "selectACategory": "اختر فئة",
+    "chooseFromOptions": "اختر من بين الخيارات مثل\n كرة القدم أو البرامج\n التليفزيونية.",
+    "chooseAFocus": "اختر التركيز",
+    "decideWhetherYouWant": "قرر ما إذا كنت تريد إنشاء قصة\n حول نادٍ، أو لاعب،\n أو فيلم.",
+    "answer5Questions": "الإجابة على 5 أسئلة",
+    "provideResponsesTo": "تقديم الإجابات على \n الأسئلة الخمسة \n المطروحة.",
+    "generateYourStory": "قم بإنشاء قصتك",
+    "askAItoCreateTheStory": "اطلب من الذكاء الاصطناعي أن\n  يقوم بإنشاء القصة بناءً \n على مدخلاتك.",
+    "shareTheStory": "شارك القصة",
+    "shareTheGeneratedStory": "شارك القصة التي تم\n  إنشاؤها مع\n  أصدقائك."
 }

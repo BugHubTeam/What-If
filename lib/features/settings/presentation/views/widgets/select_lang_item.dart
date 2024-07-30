@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/app_images.dart';
+import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
 import 'package:what_if/core/utils/styles.dart';
 
 class SelectLangItem extends StatelessWidget {
@@ -55,8 +56,23 @@ class SelectLangItem extends StatelessWidget {
               SizedBox(
                 height: 32,
                 child: isSelected == true
-                    ? Image.asset(
-                        AppImages.ellipsRadio,
+                    //radio button
+                    ? Stack(
+                        children: [
+                          Image.asset(
+                            AppImages.ellipsRadio,
+                          ),
+                          const Positioned(
+                            left: 10,
+                            top: 7,
+                            child: CustomGradientWidget(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.white,
+                                radius: 7,
+                              ),
+                            ),
+                          )
+                        ],
                       )
                     : null,
               ),

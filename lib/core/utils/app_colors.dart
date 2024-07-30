@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+
+  static const Color primaryColor=Color(0XFF301476);
+
   static const List<Color> scaffoldBgGradientColors = [
     Color(0XFF291165),
     Color(0XFF261553),

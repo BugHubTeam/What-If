@@ -14,7 +14,6 @@ class Styles {
     fontFamily: Fonts.zenDotsFontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w400,
-    height: 0.9,
     color: Colors.white,
   );
   static const TextStyle textStyle16Inter = TextStyle(
@@ -28,7 +27,6 @@ class Styles {
     fontFamily: Fonts.moulFontFamily,
     fontSize: 24,
     fontWeight: FontWeight.w400,
-    height: 0.9,
     color: Colors.white,
   );
   static const TextStyle textStyle12 = TextStyle(
