@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_colors.dart';
+import 'package:what_if/core/utils/components/custom_divider.dart';
 import 'package:what_if/core/utils/fonts.dart';
 import 'package:what_if/core/utils/styles.dart';
 
@@ -42,17 +43,9 @@ class CustomLearnItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 140, vertical: 18),
           child: enableDivider!
-              ? Container(
-                  height: 6,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(70),
-                    gradient: const LinearGradient(
-                      colors: AppColors.containerBgGradientColors,
-                    ),
-                  ),
-                )
+              ? const CustomDivider()
               : null,
-        )
+        ),
       ],
     );
   }

@@ -20,44 +20,49 @@ class HowToPlayBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomAppBar(title: ''),
-          SizedBox(height: mediaQuery.height * 0.03),
+          SizedBox(height: mediaQuery.height * 0.04),
           CustomContainer(
-            emptySpaceHeight: mediaQuery.height * 0.08,
-            child: ListView(
-              children: [
-                CustomGradientWidget(
-                  gradientColors: AppColors.containerBgGradientColors,
-                  child: Text(
-                    "${AppStrings.howToPlay.tr()} \n“What if”",
-                    style: Styles.textStyle24.copyWith(
-                      color: Colors.white,
-                      height: 1.5,
+            emptySpaceHeight: mediaQuery.height * 0.1,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 22),
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  CustomGradientWidget(
+                    gradientColors: AppColors.containerBgGradientColors,
+                    child: Text(
+                      "${AppStrings.howToPlay.tr()} \n“What if”",
+                      style: Styles.textStyle24.copyWith(
+                        color: Colors.white,
+                        height: 1.5,
+                        fontSize: 32,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-                const CustomLearnItem(
-                  title: AppStrings.selectACategory,
-                  subTitle: AppStrings.chooseFromOptions,
-                ),
-                const CustomLearnItem(
-                  title: AppStrings.chooseAFocus,
-                  subTitle: AppStrings.decideWhetherYouWant,
-                ),
-                const CustomLearnItem(
-                  title: AppStrings.answer5Questions,
-                  subTitle: AppStrings.provideResponsesTo,
-                ),
-                const CustomLearnItem(
-                  title: AppStrings.generateYourStory,
-                  subTitle: AppStrings.askAItoCreateTheStory,
-                ),
-                const CustomLearnItem(
-                  title: AppStrings.shareTheStory,
-                  subTitle: AppStrings.shareTheGeneratedStory,
-                  enableDivider: false,
-                ),
-              ],
+                  const CustomLearnItem(
+                    title: AppStrings.selectACategory,
+                    subTitle: AppStrings.chooseFromOptions,
+                  ),
+                  const CustomLearnItem(
+                    title: AppStrings.chooseAFocus,
+                    subTitle: AppStrings.decideWhetherYouWant,
+                  ),
+                  const CustomLearnItem(
+                    title: AppStrings.answer5Questions,
+                    subTitle: AppStrings.provideResponsesTo,
+                  ),
+                  const CustomLearnItem(
+                    title: AppStrings.generateYourStory,
+                    subTitle: AppStrings.askAItoCreateTheStory,
+                  ),
+                  const CustomLearnItem(
+                    title: AppStrings.shareTheStory,
+                    subTitle: AppStrings.shareTheGeneratedStory,
+                    enableDivider: false,
+                  ),
+                ],
+              ),
             ),
           )
         ],

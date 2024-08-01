@@ -7,8 +7,8 @@
     "tv": "Tv Shows",
     "political": "Political",
     "pleaseChooseYourLanguage": "Please Choose Your \nLanguage..",
-    "englishUK": "English (United States)",
-    "arabicEG": "Arabic (Egypt)",
+    "englishUK": "United States (English)",
+    "arabicEG": "Egypt (Arabic)",
     "yourLanguagePreference": "Your language preference \ncan be changed at any \ntime in setting",
     "continueSTR": "Continue",
     "selectACategory": "Select a Category",
@@ -20,5 +20,11 @@
     "generateYourStory": "Generate Your Story",
     "askAItoCreateTheStory": "Ask AI to create the \nstory based on your \ninputs.",
     "shareTheStory": "Share the Story",
-    "shareTheGeneratedStory": "Share the generated \nstory with your \nfriends."
+    "shareTheGeneratedStory": "Share the generated \nstory with your \nfriends.",
+    "questions": "Questions",
+    "of": "of",
+    "no": "No",
+    "yes": "Yes",
+    "whatsYourAnswer":"What’s Your Answer",
+    "skipQuestion":"skip Question"
 }

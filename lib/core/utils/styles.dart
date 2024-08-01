@@ -29,6 +29,20 @@ class Styles {
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
+  static const TextStyle textStyle24Shrikh = TextStyle(
+    fontFamily: Fonts.shrikhandFontFamily,
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    fontStyle: FontStyle.italic,
+  );
+  static const TextStyle textStyle16Shrikh = TextStyle(
+    fontFamily: Fonts.shrikhandFontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
+    fontStyle: FontStyle.italic,
+  );
   static const TextStyle textStyle12 = TextStyle(
     fontFamily: Fonts.moulFontFamily,
     fontSize: 12,

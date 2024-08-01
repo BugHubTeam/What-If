@@ -22,6 +22,7 @@ class HomeBody extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 80),
             child: CustomGradientWidget(
+              //what if
               child: Text(
                 AppStrings.whatIf,
                 style: Styles.textStyle56,
@@ -41,7 +42,6 @@ class HomeBody extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, RoutesName.catagoriesView);
             },
-            enableBorderRadius: false,
           ),
         ),
         const Spacer(flex: 1),

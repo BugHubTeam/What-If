@@ -23,25 +23,21 @@ class SettingsBody extends StatelessWidget {
       child: Column(
         children: [
           CustomAppBar(title: AppStrings.settings.tr()),
-          SizedBox(height: mediaQuery.height * 0.03),
+          SizedBox(height: mediaQuery.height * 0.04),
           CustomContainer(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      CustomGradientWidget(
-                        gradientColors: AppColors.containerBgGradientColors,
-                        child: Text(
-                          AppStrings.pleaseChooseYourLanguage.tr(),
-                          style: Styles.textStyle24.copyWith(
-                            color: Colors.white,
-                          ),
-                        ),
+                  CustomGradientWidget(
+                    gradientColors: AppColors.containerBgGradientColors,
+                    child: Text(
+                      AppStrings.pleaseChooseYourLanguage.tr(),
+                      style: Styles.textStyle24.copyWith(
+                        color: Colors.white,
                       ),
-                    ],
+                    ),
                   ),
                   const Spacer(flex: 1),
 

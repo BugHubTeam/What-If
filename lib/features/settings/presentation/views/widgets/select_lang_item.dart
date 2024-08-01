@@ -23,14 +23,13 @@ class SelectLangItem extends StatelessWidget {
     var mediaQuery = MediaQuery.of(context).size;
     return Bounceable(
       onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 1000),
+      child: Container(
         padding: isSelected == true ? const EdgeInsets.all(4) : null,
         decoration: isSelected == true
             ? BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
                 gradient: const LinearGradient(
-                  colors: AppColors.categotyBgGradientColors,
+                  colors: AppColors.containerBgGradientColors,
                 ),
               )
             : null,
@@ -38,7 +37,7 @@ class SelectLangItem extends StatelessWidget {
           width: mediaQuery.width,
           padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 10),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.largContainerBgColor,
             borderRadius: BorderRadius.circular(7),
             boxShadow: const [
               AppColors.selectLangBoxShadow,
@@ -63,12 +62,12 @@ class SelectLangItem extends StatelessWidget {
                             AppImages.ellipsRadio,
                           ),
                           const Positioned(
-                            left: 10,
-                            top: 7,
+                            left: 11,
+                            top: 8,
                             child: CustomGradientWidget(
                               child: CircleAvatar(
                                 backgroundColor: Colors.white,
-                                radius: 7,
+                                radius: 6,
                               ),
                             ),
                           )

@@ -12,4 +12,5 @@ class AppImages {
   static const String flagEgypt = 'assets/images/flag-egypt.png';
   static const String flagUK = 'assets/images/flag_UK.png';
   static const String ellipsRadio = 'assets/images/Ellipse_radio.png';
+  static const String yesORno = 'assets/images/yesORno.png';
 }

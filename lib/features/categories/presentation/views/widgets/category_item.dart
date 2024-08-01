@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/features/categories/data/models/category_model.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/components/custom_gradient_button.dart';
@@ -60,7 +61,10 @@ class CategoryItem extends StatelessWidget {
                   text: '',
                   enableButton2: true,
                   iconImage: 'assets/images/play_icon.png',
-                  onTap: categoryModel.onTap,
+                  // onTap: categoryModel.onTap,
+                  onTap: () {
+                    Navigator.pushNamed(context, RoutesName.questionsView);
+                  },
                 ),
               )
             ],

@@ -28,5 +28,12 @@ class AppStrings {
   static const String askAItoCreateTheStory = 'askAItoCreateTheStory';
   static const String shareTheStory = 'shareTheStory';
   static const String shareTheGeneratedStory = 'shareTheGeneratedStory';
-
+  //
+  static const String questions = 'questions';
+  static const String of = 'of';
+  static const String no = 'no';
+  static const String yes = 'yes';
+  static const String whatsYourAnswer = 'whatsYourAnswer';
+  static const String skipQuestion = 'skipQuestion';
+  
 }

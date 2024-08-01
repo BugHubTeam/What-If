@@ -7,8 +7,8 @@
     "tv": "عرض تلفزيوني",
     "political": "سياسي",
     "pleaseChooseYourLanguage": "الرجاء اختيار اللغة \n الخاصة بك..",
-    "englishUK": "الإنجليزية (الولايات المتحدة)",
-    "arabicEG": "العربية(مصر)",
+    "englishUK": "الولايات المتحدة(الإنجليزية)",
+    "arabicEG": "مصر(العربية)",
     "yourLanguagePreference": "يمكن تغيير تفضيلات اللغة الخاصة  \n بك في أي وقت في \n الإعدادات",
     "continueSTR": "أكمل",
     "selectACategory": "اختر فئة",
@@ -20,5 +20,11 @@
     "generateYourStory": "قم بإنشاء قصتك",
     "askAItoCreateTheStory": "اطلب من الذكاء الاصطناعي أن\n  يقوم بإنشاء القصة بناءً \n على مدخلاتك.",
     "shareTheStory": "شارك القصة",
-    "shareTheGeneratedStory": "شارك القصة التي تم\n  إنشاؤها مع\n  أصدقائك."
+    "shareTheGeneratedStory": "شارك القصة التي تم\n  إنشاؤها مع\n  أصدقائك.",
+    "questions": "الأسئلة",
+    "of": "من",
+    "no": "لا",
+    "yes": "نعم",
+    "whatsYourAnswer": "ما هي اجابتك",
+    "skipQuestion": "تخطي السؤال"
 }

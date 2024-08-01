@@ -31,7 +31,7 @@ class CustomContainer extends StatelessWidget {
                 end: Alignment.centerRight,
               ),
               boxShadow: const [
-                AppColors.settingsBoxShadow,
+                AppColors.largContainerBoxShadow,
               ],
             ),
             child: Container(
@@ -39,7 +39,7 @@ class CustomContainer extends StatelessWidget {
               height: mediaQuery.height,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius ?? 70),
-                color: const Color(0XFFD9D9D9),
+                color: AppColors.largContainerBgColor,
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -57,11 +57,12 @@ class CustomContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: -73,
+            top: -75,
+            left: mediaQuery.height*0.12,
             child: Image.asset(
               'assets/images/Logo.png',
               fit: BoxFit.fill,
-              height: 180,
+              height: 185,
             ),
           ),
         ],
