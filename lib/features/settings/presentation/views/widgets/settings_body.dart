@@ -22,7 +22,7 @@ class SettingsBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 24),
       child: Column(
         children: [
-          CustomAppBar(title: AppStrings.settings.tr()),
+          const CustomAppBar(title: AppStrings.settings),
           SizedBox(height: mediaQuery.height * 0.04),
           CustomContainer(
             child: Padding(

@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
@@ -22,7 +23,7 @@ class QuestionsBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Column(
         children: [
-          CustomAppBar(title: AppStrings.questions.tr()),
+          const CustomAppBar(title: AppStrings.questions),
           SizedBox(height: mediaQuery.height * 0.09),
           CustomContainer(
             emptySpaceHeight: mediaQuery.height * 0.1,
@@ -93,7 +94,9 @@ class QuestionsBody extends StatelessWidget {
               borderRadius: 30,
               height: mediaQuery.height * 0.03,
               boxShadow: const [AppColors.selectLangBoxShadow],
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RoutesName.storyView);
+              },
             ),
           ),
           SizedBox(height: mediaQuery.height * 0.08),
@@ -102,37 +105,3 @@ class QuestionsBody extends StatelessWidget {
     );
   }
 }
-
-// class SkipQuestionTextEn extends StatelessWidget {
-//   const SkipQuestionTextEn({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       children: [
-//         Text(
-//           's',
-//           style: Styles.textStyle16.copyWith(
-//             color: Colors.black,
-//           ),
-//         ),
-//         Text(
-//           'k',
-//           style: Styles.textStyle16.copyWith(
-//             color: Colors.black,
-//             fontFamily: Fonts.moulFontFamily,
-//           ),
-//         ),
-//         Text(
-//           'ip Question',
-//           style: Styles.textStyle16.copyWith(
-//             color: Colors.black,
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }

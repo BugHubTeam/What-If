@@ -5,4 +5,5 @@ class RoutesName {
   static const String settingsView = '/settingsView';
   static const String howToPlayView = '/howToPlayView';
   static const String questionsView = '/questionsView';
+  static const String storyView = '/storyView';
 }

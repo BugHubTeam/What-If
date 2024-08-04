@@ -9,12 +9,10 @@ class CustomGradientButton extends StatelessWidget {
     this.enableButton2 = false,
     this.onTap,
     required this.text,
-    this.enableBorderRadius = true,
     this.iconImage,
   });
   final String text;
   final bool? enableButton2;
-  final bool? enableBorderRadius;
   final void Function()? onTap;
   final String? iconImage;
 
@@ -27,15 +25,15 @@ class CustomGradientButton extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: const RadialGradient(
             colors: AppColors.borderGradientColors1,
-            radius: 2,
+            radius: 1,
           ),
-          borderRadius: BorderRadius.circular(enableBorderRadius! ? 16 : 0),
+          borderRadius: BorderRadius.circular(16),
         ),
         child: Container(
           padding: const EdgeInsets.all(3),
           decoration: BoxDecoration(
             color: enableButton2 == true ? null : const Color(0XFF23094C),
-            borderRadius: BorderRadius.circular(enableBorderRadius! ? 16 : 0),
+            borderRadius: BorderRadius.circular(16),
             gradient: enableButton2 == true
                 ? const LinearGradient(
                     colors: AppColors.defaultGradientColors,

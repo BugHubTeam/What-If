@@ -109,44 +109,6 @@ class AppColors {
     Color(0XFF8BDAF3),
   ];
 
-  // static const List<Color> borderGradientColors2 = [
-  //   Color(0XFF301476),
-  //   Color(0XFF311072),
-  //   Color(0XFF243E91),
-  //   Color(0XFF2B2480),
-  //   Color(0XFF2B2480),
-  //   Color(0XFF301173),
-  //   Color(0XFF2E1878),
-  //   Color(0XFF2B2580),
-  //   Color(0XFF26378C),
-  //   Color(0XFF204E9C),
-  //   Color(0XFF186AAE),
-  //   Color(0XFF0F8CC5),
-  //   Color(0XFF1A62A9),
-  //   Color(0XFF01BEE6),
-  //   Color(0XFF01BEE6),
-  //   Color(0XFF0E90C7),
-  //   Color(0XFF01BEE6),
-  // ];
-  // static const List<Color> containerBgGradientColors2 = [
-  //   Color(0XFF01BEE6),
-  //   Color(0XFF0E90C7),
-  //   Color(0XFF1A62A9),
-  //   Color(0XFF243E91),
-  //   Color(0XFF2B2480),
-  //   Color(0XFF301476),
-  //   Color(0XFF310F72),
-  //   Color(0XFF2E1878),
-  //   Color(0XFF301173),
-  //   Color(0XFF2B2580),
-  //   Color(0XFF26378C),
-  //   Color(0XFF204E9C),
-  //   Color(0XFF186AAE),
-  //   Color(0XFF0F8CC5),
-  //   Color(0XFF01BEE6),
-  //   Color(0XFF04B2DE),
-  //   Color(0XFF01BEE6),
-  // ];
 
   static const Color redDarkColor = Color(0XFFC10F0F);
   static const Color redDarkColor2 = Color(0XFFCF1B13);
