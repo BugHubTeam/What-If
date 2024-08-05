@@ -12,7 +12,7 @@ const playerSchema = new mongoose.Schema({
         type:Schema.Types.ObjectId,
         ref:'Category',
     }
-})
+},{timestamps:true})
 
 // model
 export const Player = model('Player' , playerSchema)

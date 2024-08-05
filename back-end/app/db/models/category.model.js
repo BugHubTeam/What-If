@@ -5,7 +5,7 @@ const categorySchema = new mongoose.Schema({
     name:{
         String,
     }
-})
+},{timestamps:true})
 
 // model
 export const Category = model('Category' , categorySchema)

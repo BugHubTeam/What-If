@@ -12,7 +12,7 @@ const clubSchema = new mongoose.Schema({
         type:Schema.Types.ObjectId,
         ref:'Category',
     }
-})
+},{timestamps:true})
 
 // model
 export const Club = model('Club' , clubSchema)
