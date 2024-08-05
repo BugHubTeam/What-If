@@ -26,5 +26,12 @@
     "no": "لا",
     "yes": "نعم",
     "whatsYourAnswer": "ما هي اجابتك",
-    "skipQuestion": "تخطي السؤال"
+    "skipQuestion": "تخطي السؤال",
+    "chooseYourWishToStart": "اختر رغبتك لكي نبدأ؟!",
+    "clubs": "النوادي",
+    "players": "اللاعبون",
+    "search": "بحث",
+    "story": "القصة",
+    "playAgain": "لعب مرة أخرى",
+    "share": "شارك"
 }

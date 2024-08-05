@@ -19,6 +19,7 @@ class CustomContainerWith1border extends StatelessWidget {
     this.borderColor,
     this.isRadialGradient = false,
     this.boxShadow,
+    this.textAlign = TextAlign.center,
   });
   final String text;
   final void Function()? onTap;
@@ -33,6 +34,7 @@ class CustomContainerWith1border extends StatelessWidget {
   final TextStyle? style;
   final bool? isRadialGradient;
   final List<BoxShadow>? boxShadow;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +55,8 @@ class CustomContainerWith1border extends StatelessWidget {
                   : RadialGradient(
                       colors: borderGradientColors ??
                           AppColors.borderGradientColors1,
+                      radius: 1,
+                      
                     ),
 
           borderRadius: BorderRadius.circular(borderRadius!),
@@ -78,21 +82,19 @@ class CustomContainerWith1border extends StatelessWidget {
                   )
                 : null,
           ),
-          child: Center(
-            child: iconImage == null
-                ? Padding(
-                    padding: const EdgeInsets.all(3),
-                    child: Text(
-                      text,
-                      style: style ?? Styles.textStyle16,
-                      textAlign: TextAlign.center,
-                    ),
-                  )
-                : Image.asset(
-                    iconImage!,
-                    fit: BoxFit.fill,
+          child: iconImage == null
+              ? Padding(
+                  padding: EdgeInsets.all(height ?? 3),
+                  child: Text(
+                    text,
+                    style: style ?? Styles.textStyle16,
+                    textAlign: textAlign,
                   ),
-          ),
+                )
+              : Image.asset(
+                  iconImage!,
+                  fit: BoxFit.fill,
+                ),
         ),
       ),
     );

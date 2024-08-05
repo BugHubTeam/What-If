@@ -5,6 +5,8 @@ class AppColors {
 
   static const Color largContainerBgColor = Color(0XFFD9D9D9);
 
+  static const Color unSelectedColor = Color(0XFFC3C6D7);
+
   static const List<Color> scaffoldBgGradientColors = [
     Color(0XFF291165),
     Color(0XFF261553),
@@ -108,7 +110,6 @@ class AppColors {
     Color(0XFF882FCC),
     Color(0XFF8BDAF3),
   ];
-
 
   static const Color redDarkColor = Color(0XFFC10F0F);
   static const Color redDarkColor2 = Color(0XFFCF1B13);

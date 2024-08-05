@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 55, bottom: 22),
+      margin: const EdgeInsets.only(top: 40, bottom: 22),
       child: Row(
         children: [
           Bounceable(
@@ -31,11 +31,17 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 1),
-          CustomGradientWidget(
-            child: Text(
-              title.tr(),
-              style: Styles.textStyle24,
-              textAlign: TextAlign.center,
+          Container(
+            alignment: Alignment.center,
+            width: MediaQuery.of(context).size.width * 0.7,
+            height: MediaQuery.of(context).size.height * 0.07,
+            child: CustomGradientWidget(
+              child: Text(
+                title.tr(),
+                style: Styles.textStyle24,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.clip,
+              ),
             ),
           ),
           const Spacer(flex: 1),

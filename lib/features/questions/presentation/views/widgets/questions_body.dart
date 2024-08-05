@@ -24,7 +24,7 @@ class QuestionsBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomAppBar(title: AppStrings.questions),
-          SizedBox(height: mediaQuery.height * 0.09),
+          SizedBox(height: mediaQuery.height * 0.08),
           CustomContainer(
             emptySpaceHeight: mediaQuery.height * 0.1,
             borderRadius: 40,
@@ -76,7 +76,7 @@ class QuestionsBody extends StatelessWidget {
                     style: Styles.textStyle16Shrikh,
                     isRadialGradient: true,
                     borderRadius: 30,
-                    height: mediaQuery.height * 0.035,
+                    // height: mediaQuery.height * 0.025,
                     onTap: () {},
                   ),
                 ),
@@ -92,7 +92,7 @@ class QuestionsBody extends StatelessWidget {
               backgroundColor: const Color(0xff374179),
               borderColor: AppColors.redDarkColor,
               borderRadius: 30,
-              height: mediaQuery.height * 0.03,
+              height: mediaQuery.height * 0.01,
               boxShadow: const [AppColors.selectLangBoxShadow],
               onTap: () {
                 Navigator.pushNamed(context, RoutesName.storyView);

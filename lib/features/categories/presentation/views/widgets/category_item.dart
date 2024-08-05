@@ -63,7 +63,7 @@ class CategoryItem extends StatelessWidget {
                   iconImage: 'assets/images/play_icon.png',
                   // onTap: categoryModel.onTap,
                   onTap: () {
-                    Navigator.pushNamed(context, RoutesName.questionsView);
+                    Navigator.pushNamed(context, RoutesName.subCategoryView);
                   },
                 ),
               )

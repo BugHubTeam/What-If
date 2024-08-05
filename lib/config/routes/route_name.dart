@@ -6,4 +6,5 @@ class RoutesName {
   static const String howToPlayView = '/howToPlayView';
   static const String questionsView = '/questionsView';
   static const String storyView = '/storyView';
+  static const String subCategoryView = '/subCategoryView';
 }

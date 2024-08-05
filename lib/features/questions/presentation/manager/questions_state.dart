@@ -8,3 +8,17 @@ abstract class QuestionsState extends Equatable {
 }
 
 class QuestionsInitial extends QuestionsState {}
+
+class QuestionsLoading extends QuestionsState {
+  const QuestionsLoading();
+}
+
+class QuestionsSuccess extends QuestionsState {
+  final List<String> questions;
+  const QuestionsSuccess({required this.questions});
+}
+
+class QuestionsFailure extends QuestionsState {
+  final String errorMessage;
+  const QuestionsFailure({required this.errorMessage});
+}

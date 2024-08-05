@@ -25,6 +25,13 @@
     "of": "of",
     "no": "No",
     "yes": "Yes",
-    "whatsYourAnswer":"What’s Your Answer",
-    "skipQuestion":"skip Question"
+    "whatsYourAnswer": "What’s Your Answer",
+    "skipQuestion": "skip Question",
+    "chooseYourWishToStart": "Choose Your Wish To Start?!",
+    "clubs": "CLUBS",
+    "players": "PLAYERS",
+    "search": "search",
+    "story": "The Story",
+    "playAgain": "Play again",
+    "share": "Share"
 }

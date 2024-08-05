@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_colors.dart';
-import 'package:what_if/core/utils/app_images.dart';
-import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
 import 'package:what_if/core/utils/styles.dart';
+
+import '../../../../../core/utils/components/custom_radio_button.dart';
 
 class SelectLangItem extends StatelessWidget {
   const SelectLangItem({
@@ -56,23 +56,7 @@ class SelectLangItem extends StatelessWidget {
                 height: 32,
                 child: isSelected == true
                     //radio button
-                    ? Stack(
-                        children: [
-                          Image.asset(
-                            AppImages.ellipsRadio,
-                          ),
-                          const Positioned(
-                            left: 11,
-                            top: 8,
-                            child: CustomGradientWidget(
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 6,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
+                    ? const CustomRadioButton()
                     : null,
               ),
             ],

@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
 import 'package:what_if/core/utils/styles.dart';
@@ -15,7 +17,7 @@ class StoryBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Column(
         children: [
-          const CustomAppBar(title: 'Story'),
+          const CustomAppBar(title: AppStrings.story),
           SizedBox(height: mediaQuery.height * 0.05),
           CustomContainer(
             emptySpaceHeight: mediaQuery.height * 0.1,
@@ -42,7 +44,7 @@ class StoryBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 85),
             child: CustomGradientButton(
-              text: 'play again',
+              text: AppStrings.playAgain.tr(),
               enableButton2: true,
               onTap: () {},
             ),
@@ -51,7 +53,7 @@ class StoryBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 120),
             child: CustomGradientButton(
-              text: 'Share',
+              text: AppStrings.share.tr(),
               enableButton2: true,
               onTap: () {},
             ),

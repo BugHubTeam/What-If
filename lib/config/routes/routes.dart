@@ -3,10 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:what_if/features/categories/presentation/views/categories_view.dart';
 import 'package:what_if/features/home/presentation/views/home_view.dart';
 import 'package:what_if/features/how_to_play/presentation/views/how_to_play_view.dart';
+import 'package:what_if/features/questions/presentation/manager/questions_cubit.dart';
 import 'package:what_if/features/settings/presentation/manager/settings_cubit.dart';
 import 'package:what_if/features/settings/presentation/views/settings_view.dart';
 import 'package:what_if/features/splash/presentation/views/splash_view.dart';
 import 'package:what_if/features/story/presentation/views/story_view.dart';
+import 'package:what_if/features/sub_category/presentation/views/sub_category_view.dart';
 import '../../features/questions/presentation/views/questions_view.dart';
 import 'route_name.dart';
 
@@ -44,12 +46,20 @@ class Routes {
 
       case RoutesName.questionsView:
         return MaterialPageRoute(
-          builder: (context) => const QuestionsView(),
+          builder: (context) => BlocProvider(
+            create: (context) => QuestionsCubit()..getQuestions(),
+            child: const QuestionsView(),
+          ),
           settings: settings,
         );
       case RoutesName.storyView:
         return MaterialPageRoute(
           builder: (context) => const StoryView(),
+          settings: settings,
+        );
+      case RoutesName.subCategoryView:
+        return MaterialPageRoute(
+          builder: (context) => const SubCategoryView(),
           settings: settings,
         );
 
