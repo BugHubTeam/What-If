@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
+import 'package:what_if/core/utils/functions/display_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'dart:ui' as ui;
 import '../../../../../config/routes/route_name.dart';
@@ -39,8 +40,12 @@ class HomeBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 75),
           child: CustomGradientButton(
             text: AppStrings.letsPlay.tr(),
-            onTap: () {
-              Navigator.pushNamed(context, RoutesName.catagoriesView);
+            onTap: () async {
+              await displaySound().then(
+                (value) {
+                  Navigator.pushNamed(context, RoutesName.catagoriesView);
+                },
+              );
             },
           ),
         ),
@@ -53,8 +58,12 @@ class HomeBody extends StatelessWidget {
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.settings.tr(),
-                onTap: () {
-                  Navigator.pushNamed(context, RoutesName.settingsView);
+                onTap: () async {
+                  await displaySound().then(
+                    (value) {
+                      Navigator.pushNamed(context, RoutesName.settingsView);
+                    },
+                  );
                 },
               ),
             ),
@@ -64,8 +73,12 @@ class HomeBody extends StatelessWidget {
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.howToPlay.tr(),
-                onTap: () {
-                  Navigator.pushNamed(context, RoutesName.howToPlayView);
+                onTap: () async {
+                  await displaySound().then(
+                    (value) {
+                      Navigator.pushNamed(context, RoutesName.howToPlayView);
+                    },
+                  );
                 },
               ),
             ),

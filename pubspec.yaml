@@ -17,7 +17,9 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.6
   flutter_bounceable: ^1.1.0
-  flutter_svg: ^2.0.10+1
+  # flutter_svg: ^2.0.10+1
+  animate_do: ^3.3.4
+  audioplayers: ^6.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -39,6 +41,7 @@ flutter:
   assets:
     - assets/images/
     - assets/translations/
+    - assets/sounds/
 
   # fonts:
   fonts:

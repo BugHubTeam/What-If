@@ -20,7 +20,7 @@ class HowToPlayBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomAppBar(title: ''),
-          // SizedBox(height: mediaQuery.height * 0.02),
+          SizedBox(height: mediaQuery.height * 0.01),
           CustomContainer(
             emptySpaceHeight: mediaQuery.height * 0.1,
             child: Padding(

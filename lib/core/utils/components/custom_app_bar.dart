@@ -4,6 +4,7 @@ import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import '../../../config/routes/route_name.dart';
+import '../functions/display_button.dart';
 import '../styles.dart';
 import 'custom_gradien_widget.dart';
 
@@ -11,8 +12,10 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
     required this.title,
+    this.backOnTap,
   });
   final String title;
+  final void Function()? backOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,11 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         children: [
           Bounceable(
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: backOnTap ??
+                () {
+                  displaySound();
+                  Navigator.pop(context);
+                },
             child: Image.asset(
               context.locale.toString() == AppStrings.languageCodes[0]
                   ? AppImages.arrowBackIcon
@@ -46,12 +51,16 @@ class CustomAppBar extends StatelessWidget {
           ),
           const Spacer(flex: 1),
           Bounceable(
-            onTap: () {
-              final String currentRoute =
-                  ModalRoute.of(context)!.settings.name!;
-              if (currentRoute != RoutesName.settingsView) {
-                Navigator.pushNamed(context, RoutesName.settingsView);
-              }
+            onTap: () async {
+              await displaySound().then(
+                (value) {
+                  final String currentRoute =
+                      ModalRoute.of(context)!.settings.name!;
+                  if (currentRoute != RoutesName.settingsView) {
+                    Navigator.pushNamed(context, RoutesName.settingsView);
+                  }
+                },
+              );
             },
             child: Image.asset(
               AppImages.settingsIcon,

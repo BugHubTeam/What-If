@@ -2,8 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/functions/display_button.dart';
 import '../../../../../core/utils/styles.dart';
 import 'dart:ui' as ui;
+
+import '../../manager/questions_cubit.dart';
 
 class NoWidget extends StatelessWidget {
   const NoWidget({super.key, required this.text});
@@ -11,8 +14,15 @@ class NoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = QuestionsCubit.get(context);
     return Bounceable(
-      onTap: () {},
+      onTap: () async {
+        await displaySound().then(
+          (value) {
+            cubit.answerTheQuestion(context);
+          },
+        );
+      },
       child: Row(
         textDirection: ui.TextDirection.ltr,
         children: [

@@ -1,16 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/styles.dart';
+import 'package:what_if/features/questions/presentation/manager/questions_cubit.dart';
 import 'package:what_if/features/questions/presentation/views/widgets/no_widget.dart';
-import 'package:what_if/features/questions/presentation/views/widgets/num_of_questions_widget.dart';
+import 'package:what_if/features/questions/presentation/views/widgets/questions_builder.dart';
 import 'package:what_if/features/questions/presentation/views/widgets/yes_widget.dart';
 import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 import '../../../../../core/utils/components/custom_container_with_1border.dart';
+import '../../../../../core/utils/functions/display_button.dart';
 
 class QuestionsBody extends StatelessWidget {
   const QuestionsBody({super.key});
@@ -18,6 +19,8 @@ class QuestionsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
+    // var cubit = QuestionsCubit.get(context);
+    var cubit = QuestionsCubit.get(context);
 
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
@@ -28,26 +31,9 @@ class QuestionsBody extends StatelessWidget {
           CustomContainer(
             emptySpaceHeight: mediaQuery.height * 0.1,
             borderRadius: 40,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 34),
-              child: Column(
-                children: [
-                  const NumOfQuestionsWidget(),
-                  SizedBox(height: mediaQuery.height * 0.022),
-                  SizedBox(
-                    height: mediaQuery.height * 0.3,
-                    child: SingleChildScrollView(
-                      child: Text(
-                        '“Is Catalan a language or a dialect?”',
-                        style: Styles.textStyle24.copyWith(
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 34),
+              child: QuestionsBuilder(),
             ),
           ),
           const SizedBox(height: 5),
@@ -94,8 +80,12 @@ class QuestionsBody extends StatelessWidget {
               borderRadius: 30,
               height: mediaQuery.height * 0.01,
               boxShadow: const [AppColors.selectLangBoxShadow],
-              onTap: () {
-                Navigator.pushNamed(context, RoutesName.storyView);
+              onTap: () async {
+                await displaySound().then(
+                  (value) {
+                    cubit.skipQuestion();
+                  },
+                );
               },
             ),
           ),

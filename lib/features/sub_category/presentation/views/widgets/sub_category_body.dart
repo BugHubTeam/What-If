@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_app_bar.dart';
 import 'package:what_if/features/sub_category/presentation/views/widgets/custom_text_field.dart';
@@ -16,7 +17,16 @@ class SubCategoryBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Column(
         children: [
-          const CustomAppBar(title: AppStrings.chooseYourWishToStart),
+          CustomAppBar(
+            title: AppStrings.chooseYourWishToStart,
+            backOnTap: () {
+              //navigation
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                RoutesName.catagoriesView,
+                (Route<dynamic> route) => false,
+              );
+            },
+          ),
           const SelectedSubCategory(),
           SizedBox(height: mediaQuery.height * 0.02),
           const CustomTextField(),

@@ -36,12 +36,13 @@ class AppStrings {
   static const String whatsYourAnswer = 'whatsYourAnswer';
   static const String skipQuestion = 'skipQuestion';
   static const String chooseYourWishToStart = 'chooseYourWishToStart';
-  static const String clubs= 'clubs';
-  static const String players= 'players';
-  static const String search= 'search';
-  static const String story= 'story';
-  static const String playAgain= 'playAgain';
-  static const String share= 'share';
-  
-  
+  static const String clubs = 'clubs';
+  static const String players = 'players';
+  static const String search = 'search';
+  static const String story = 'story';
+  static const String playAgain = 'playAgain';
+  static const String share = 'share';
+
+  static const String storySound = 'sounds/cut_generate_story_1.wav';
+  static const String buttonSound = 'sounds/cut_on-ckick_1.wav';
 }

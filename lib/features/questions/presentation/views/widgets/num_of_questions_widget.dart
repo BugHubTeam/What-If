@@ -6,7 +6,11 @@ import 'package:what_if/core/utils/styles.dart';
 import '../../../../../core/utils/components/custom_divider.dart';
 
 class NumOfQuestionsWidget extends StatelessWidget {
-  const NumOfQuestionsWidget({super.key});
+  const NumOfQuestionsWidget({
+    super.key,
+    required this.numberOfQuestions,
+  });
+  final String numberOfQuestions;
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +21,8 @@ class NumOfQuestionsWidget extends StatelessWidget {
           padding: const EdgeInsets.only(left: 6),
           child: Row(
             children: [
-              const Text(
-                '1',
+              Text(
+                numberOfQuestions,
                 style: Styles.textStyle24Shrikh,
               ),
               Padding(

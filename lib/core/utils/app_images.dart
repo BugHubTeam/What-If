@@ -2,6 +2,7 @@ class AppImages {
   static const String logo = 'assets/images/Logo.png';
   static const String homeBgImage = 'assets/images/Home_background.jpg';
   static const String settingsIcon = 'assets/images/settings_icon.png';
+  static const String playIcon = 'assets/images/play_icon.png';
   static const String arrowBackIcon = 'assets/images/arrow_back_icon.png';
   static const String arrowBackIconAR = 'assets/images/arrow_back_icon_AR.png';
 

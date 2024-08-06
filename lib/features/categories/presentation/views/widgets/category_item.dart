@@ -2,10 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/config/routes/route_name.dart';
+import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/features/categories/data/models/category_model.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/components/custom_gradient_button.dart';
 import '../../../../../core/utils/fonts.dart';
+import '../../../../../core/utils/functions/display_button.dart';
 import '../../../../../core/utils/styles.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -60,10 +62,15 @@ class CategoryItem extends StatelessWidget {
                 child: CustomGradientButton(
                   text: '',
                   enableButton2: true,
-                  iconImage: 'assets/images/play_icon.png',
+                  iconImage: AppImages.playIcon,
                   // onTap: categoryModel.onTap,
-                  onTap: () {
-                    Navigator.pushNamed(context, RoutesName.subCategoryView);
+                  onTap: () async {
+                    await displaySound().then(
+                      (value) {
+                        Navigator.pushNamed(
+                            context, RoutesName.subCategoryView);
+                      },
+                    );
                   },
                 ),
               )

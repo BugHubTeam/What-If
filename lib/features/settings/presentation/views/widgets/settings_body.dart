@@ -6,6 +6,7 @@ import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_app_bar.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
+import 'package:what_if/core/utils/functions/display_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'package:what_if/features/settings/presentation/manager/settings_cubit.dart';
 import '../../../../../config/routes/route_name.dart';
@@ -60,15 +61,19 @@ class SettingsBody extends StatelessWidget {
                     child: CustomGradientButton(
                       text: AppStrings.continueSTR.tr(),
                       enableButton2: true,
-                      onTap: () {
-                        //change language
-                        BlocProvider.of<SettingsCubit>(context)
-                            .changeLanguage(context);
+                      onTap: () async {
+                        await displaySound().then(
+                          (value) {
+                            //change language
+                            BlocProvider.of<SettingsCubit>(context)
+                                .changeLanguage(context);
 
-                        //navigation
-                        Navigator.of(context).pushNamedAndRemoveUntil(
-                          RoutesName.homeView,
-                          (Route<dynamic> route) => true,
+                            //navigation
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                              RoutesName.homeView,
+                              (Route<dynamic> route) => false,
+                            );
+                          },
                         );
                       },
                     ),
