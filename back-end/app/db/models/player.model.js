@@ -2,7 +2,7 @@ import mongoose, { model, Schema } from "mongoose"
 
 // schema
 const playerSchema = new mongoose.Schema({
-    player:{
+    name:{
         String,
     },
     player_logo:{

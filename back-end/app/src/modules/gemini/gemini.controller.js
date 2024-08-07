@@ -4,6 +4,8 @@ import StoryChunk from "../../../db/models/storyChunk.js";
 import { Category } from "../../../db/models/category.model.js";
 import { AppError as CustomError } from "../../utils/AppError.js";
 import getChatHistory from "../../utils/getChatHistory.js";
+import { Player } from "../../../db/models/player.model.js";
+import { Club } from "../../../db/models/club.model.js";
 /**
  * @param {import('express').Request} req - Express request object
  * @param {import('express').Response} res - Express response object
@@ -39,9 +41,9 @@ export const getQuestions = async (req, res) => {
   try {
     let entity;
     if (type === "player") {
-      entity = await Player.findById(id).populate('category');
+      entity = await Player.findById(id);
     } else if (type === "club") {
-      entity = await Club.findById(id).populate('category');
+      entity = await Club.findById(id);
     } else {
       throw new CustomError("Invalid type provided", 400);
     }
@@ -52,6 +54,9 @@ export const getQuestions = async (req, res) => {
 
     // const previousChat = getChatHistory(story.chunks);
 
+    console.log(entity.name);
+    
+    
     //Configure model
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const model = genAI.getGenerativeModel({
