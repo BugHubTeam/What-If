@@ -120,33 +120,26 @@ export const getStory = async (req, res) => {
 //Finish Story
 
 export const finishStory = async (req, res) => {
-  const storyId = req.body.storyId;
-  if (!storyId) throw new CustomError("Story id must be provided", 400);
-
+  const { questions } = req.body;
+  if (!questions || !Array.isArray(questions))
+    throw new CustomError("Questions must be provided");
   try {
-    const story = await Story.findById(storyId).populate("chunks");
-    if (!story) throw new CustomError("Story not found", 400);
-
-    if (story.chunks.length === 0)
-      throw new CustomError(
-        "Can't build the story because no questions is there yet",
-        400
-      );
-
     //Configure model
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const model = genAI.getGenerativeModel({
       model: "gemini-1.5-flash",
       systemInstruction: `
-      You're the host of a game called "What if" you will provide related questions about specific topic assuming things that 
-      never happend in real life in context of ${story.category},
-      Based on the previous answers and questions you should build an organized decent fiction story
+      You're the host of a game called "What if" i will provide you with questions and answers that asuumes 
+      things that never happend in real life , all the questions will be related to each other in a specific context,
+      you're responsible of imagining and building a deceent , good structured story based on those questions and answers
+      the questions : ${JSON.stringify(
+        questions
+      )} , your response should straight forward start with the story
       `,
     });
-    const previousChat = getChatHistory(story.chunks);
-    console.log(previousChat);
-    const chat = model.startChat({ history: previousChat });
-    const prompt = "Build it ";
+
+    const chat = model.startChat({ history: [] });
+    const prompt = "Build it";
 
     const result = await chat.sendMessage(prompt);
     const response = await result.response;
