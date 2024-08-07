@@ -33,11 +33,21 @@ export const getQuestions = async (req, res) => {
   // const storyId = req.body.storyId;
   // if (!storyId) throw new CustomError("Story id must be provided", 400);
 
-  const { categoryId } = req.body;
-  if (!categoryId) throw new CustomError("Category id must be provided", 400);
+  const { id , type } = req.body;
+  if (!id || !type) throw new CustomError("Category id must be provided", 400);
 
   try {
-    const category = await Category.findById(categoryId);
+    let entity;
+    if (type === "player") {
+      entity = await Player.findById(id).populate('category');
+    } else if (type === "club") {
+      entity = await Club.findById(id).populate('category');
+    } else {
+      throw new CustomError("Invalid type provided", 400);
+    }
+        if (!entity) throw new CustomError(`${type.charAt(0).toUpperCase() + type.slice(1)} not found`, 404);
+
+    const category = entity.category;
     if (!category) throw new CustomError("Category not found", 404);
 
     // const previousChat = getChatHistory(story.chunks);
@@ -48,7 +58,7 @@ export const getQuestions = async (req, res) => {
       model: "gemini-1.5-flash",
       systemInstruction: `
       You're the host of a game called "What if" you will provide 7  related questions that can be aswered with "YES" or "No", the questions will be  about specific topic assuming things that 
-      never happend in real life in the context of ${category.name} and you can never repeat your previous and make all your questions 
+      never happend in real life in the context of ${entity.name} and you can never repeat your previous and make all your questions 
       to be related to each other to build a story, 
       , That's your only jop and 
       you're not allowed to respond with anything else .
