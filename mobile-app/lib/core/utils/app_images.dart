@@ -1,12 +1,17 @@
-import 'package:flutter/material.dart';
-
 class AppImages {
-  static String logo = 'assets/images/logo.png';
-  static String background = 'assets/images/background.png';
-  static String homeBackground = 'assets/images/Home_background.jpg';
-  static String footballImage = 'assets/images/football.png';
-  static String tvShowsImage = 'assets/images/TV-Shows.png';
-  static String politicalImage = 'assets/images/Political.png';
-  static String egyFlag = 'assets/images/egy-flag.png';
-  static String ukFlag = 'assets/images/UK-Flag.png';
+  static const String logo = 'assets/images/Logo.png';
+  static const String homeBgImage = 'assets/images/Home_background.jpg';
+  static const String settingsIcon = 'assets/images/settings_icon.png';
+  static const String playIcon = 'assets/images/play_icon.png';
+  static const String arrowBackIcon = 'assets/images/arrow_back_icon.png';
+  static const String arrowBackIconAR = 'assets/images/arrow_back_icon_AR.png';
+
+  static const String footBall = 'assets/images/football_category.png';
+  static const String tv = 'assets/images/TV_category.png';
+  static const String political = 'assets/images/political_category.png';
+
+  static const String flagEgypt = 'assets/images/flag-egypt.png';
+  static const String flagUK = 'assets/images/flag_UK.png';
+  static const String ellipsRadio = 'assets/images/Ellipse_radio.png';
+  static const String yesORno = 'assets/images/yesORno.png';
 }
