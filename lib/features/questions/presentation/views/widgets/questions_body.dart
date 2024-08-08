@@ -11,7 +11,6 @@ import 'package:what_if/features/questions/presentation/views/widgets/yes_widget
 import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 import '../../../../../core/utils/components/custom_container_with_1border.dart';
-import '../../../../../core/utils/functions/display_button.dart';
 
 class QuestionsBody extends StatelessWidget {
   const QuestionsBody({super.key});
@@ -43,26 +42,29 @@ class QuestionsBody extends StatelessWidget {
             children: [
               Image.asset(
                 AppImages.yesORno,
-                height: mediaQuery.height * 0.09,
+                height: mediaQuery.height * 0.095,
+                width: mediaQuery.width,
               ),
               Positioned(
-                left: mediaQuery.width * 0.02,
+                left: mediaQuery.width * 0.17,
                 child: const NoWidget(text: AppStrings.no),
               ),
               Positioned(
-                left: mediaQuery.width * 0.35,
+                right: mediaQuery.width * 0.16,
                 child: const YesWidget(text: AppStrings.yes),
               ),
               Positioned(
                 top: -20,
                 child: SizedBox(
                   width: mediaQuery.width * 0.5,
+                  height: mediaQuery.height * 0.044,
                   child: CustomContainerWith1border(
                     text: AppStrings.whatsYourAnswer.tr(),
+                    textAlign: TextAlign.center,
                     style: Styles.textStyle16Shrikh,
                     isRadialGradient: true,
                     borderRadius: 30,
-                    // height: mediaQuery.height * 0.025,
+                    height: 0,
                     onTap: () {},
                   ),
                 ),
@@ -80,12 +82,13 @@ class QuestionsBody extends StatelessWidget {
               borderRadius: 30,
               height: mediaQuery.height * 0.01,
               boxShadow: const [AppColors.selectLangBoxShadow],
-              onTap: () async {
-                await displaySound().then(
-                  (value) {
-                    cubit.skipQuestion();
-                  },
-                );
+              onTap: () {
+                // await displaySound().then(
+                //   (value) {
+                //     cubit.skipQuestion();
+                //   },
+                // );
+                cubit.skipQuestion();
               },
             ),
           ),

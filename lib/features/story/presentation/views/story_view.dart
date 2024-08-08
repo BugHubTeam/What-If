@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/components/custom_scaffold.dart';
-import 'package:what_if/core/utils/functions/display_button.dart';
 import 'package:what_if/features/story/presentation/views/widgets/story_body.dart';
 
 class StoryView extends StatelessWidget {
@@ -8,7 +7,7 @@ class StoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    displaySound(type: SoundType.story);
+    // displaySound(type: SoundType.story);
     return const CustomScaffold(
       body: StoryBody(),
     );

@@ -46,10 +46,7 @@ class Routes {
 
       case RoutesName.questionsView:
         return MaterialPageRoute(
-          builder: (context) => BlocProvider(
-            create: (context) => QuestionsCubit()..getQuestions(),
-            child: const QuestionsView(),
-          ),
+          builder: (context) => const QuestionsView(),
           settings: settings,
         );
       case RoutesName.storyView:

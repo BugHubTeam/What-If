@@ -7,7 +7,11 @@ import 'package:what_if/features/sub_category/presentation/views/widgets/selecte
 import 'package:what_if/features/sub_category/presentation/views/widgets/sub_categories_grid_view.dart';
 
 class SubCategoryBody extends StatelessWidget {
-  const SubCategoryBody({super.key});
+  const SubCategoryBody({
+    super.key,
+    required this.title,
+  });
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,9 @@ class SubCategoryBody extends StatelessWidget {
               );
             },
           ),
-          const SelectedSubCategory(),
+          SelectedSubCategory(
+            text: title,
+          ),
           SizedBox(height: mediaQuery.height * 0.02),
           const CustomTextField(),
           SizedBox(height: mediaQuery.height * 0.02),

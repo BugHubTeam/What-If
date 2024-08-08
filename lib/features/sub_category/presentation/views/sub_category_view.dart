@@ -7,8 +7,11 @@ class SubCategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScaffold(
-      body: SubCategoryBody(),
+    String title = ModalRoute.of(context)?.settings.arguments as String;
+    return CustomScaffold(
+      body: SubCategoryBody(
+        title: title,
+      ),
     );
   }
 }

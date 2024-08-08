@@ -38,6 +38,7 @@ class AppStrings {
   static const String chooseYourWishToStart = 'chooseYourWishToStart';
   static const String clubs = 'clubs';
   static const String players = 'players';
+  static const String movies = 'movies';
   static const String search = 'search';
   static const String story = 'story';
   static const String playAgain = 'playAgain';

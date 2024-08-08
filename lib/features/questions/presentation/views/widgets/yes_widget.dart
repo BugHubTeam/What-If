@@ -6,8 +6,6 @@ import 'package:what_if/features/questions/presentation/manager/questions_cubit.
 import '../../../../../core/utils/app_colors.dart';
 import 'dart:ui' as ui;
 
-import '../../../../../core/utils/functions/display_button.dart';
-
 class YesWidget extends StatelessWidget {
   const YesWidget({super.key, required this.text});
   final String text;
@@ -16,12 +14,13 @@ class YesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = QuestionsCubit.get(context);
     return Bounceable(
-      onTap: () async {
-        await displaySound().then(
-          (value) {
-            cubit.answerTheQuestion(context);
-          },
-        );
+      onTap: () {
+        // await displaySound().then(
+        //   (value) {
+        //     cubit.answerTheQuestion(context);
+        //   },
+        // );
+        cubit.answerTheQuestion(context);
       },
       child: Row(
         textDirection: ui.TextDirection.ltr,

@@ -5,7 +5,6 @@ import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
-import 'package:what_if/core/utils/functions/display_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 
@@ -22,14 +21,18 @@ class StoryBody extends StatelessWidget {
         children: [
           CustomAppBar(
             title: AppStrings.story,
-            backOnTap: () async {
+            backOnTap: () {
               //navigation
-              await displaySound().then((value) {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                  RoutesName.homeView,
-                  (Route<dynamic> route) => false,
-                );
-              });
+              // await displaySound().then((value) {
+              //   Navigator.of(context).pushNamedAndRemoveUntil(
+              //     RoutesName.homeView,
+              //     (Route<dynamic> route) => false,
+              //   );
+              // });
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                RoutesName.homeView,
+                (Route<dynamic> route) => false,
+              );
             },
           ),
           SizedBox(height: mediaQuery.height * 0.05),
@@ -62,14 +65,18 @@ class StoryBody extends StatelessWidget {
               child: CustomGradientButton(
                 text: AppStrings.playAgain.tr(),
                 enableButton2: true,
-                onTap: () async {
-                  await displaySound().then(
-                    (value) {
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                        RoutesName.subCategoryView,
-                        (Route<dynamic> route) => false,
-                      );
-                    },
+                onTap: () {
+                  // await displaySound().then(
+                  //   (value) {
+                  //     Navigator.of(context).pushNamedAndRemoveUntil(
+                  //       RoutesName.subCategoryView,
+                  //       (Route<dynamic> route) => false,
+                  //     );
+                  //   },
+                  // );
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    RoutesName.subCategoryView,
+                    (Route<dynamic> route) => false,
                   );
                 },
               ),
@@ -84,10 +91,10 @@ class StoryBody extends StatelessWidget {
               child: CustomGradientButton(
                 text: AppStrings.share.tr(),
                 enableButton2: true,
-                onTap: () async {
-                  await displaySound().then(
-                    (value) {},
-                  );
+                onTap: () {
+                  // await displaySound().then(
+                  //   (value) {},
+                  // );
                 },
               ),
             ),

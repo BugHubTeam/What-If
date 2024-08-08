@@ -7,15 +7,16 @@ import 'package:what_if/features/categories/data/models/category_model.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/components/custom_gradient_button.dart';
 import '../../../../../core/utils/fonts.dart';
-import '../../../../../core/utils/functions/display_button.dart';
 import '../../../../../core/utils/styles.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
     super.key,
     required this.categoryModel,
+    required this.index,
   });
   final CategoryModel categoryModel;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +65,20 @@ class CategoryItem extends StatelessWidget {
                   enableButton2: true,
                   iconImage: AppImages.playIcon,
                   // onTap: categoryModel.onTap,
-                  onTap: () async {
-                    await displaySound().then(
-                      (value) {
-                        Navigator.pushNamed(
-                            context, RoutesName.subCategoryView);
-                      },
-                    );
+                  onTap: () {
+                    // await displaySound().then(
+                    //   (value) {
+                    //     Navigator.pushNamed(
+                    //         context, RoutesName.subCategoryView);
+                    //   },
+                    // );
+                    if (index != 2) {
+                      Navigator.pushNamed(
+                        context,
+                        RoutesName.subCategoryView,
+                        arguments: categoryModel.name,
+                      );
+                    }
                   },
                 ),
               )

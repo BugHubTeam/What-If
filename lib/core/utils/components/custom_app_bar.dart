@@ -4,7 +4,6 @@ import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import '../../../config/routes/route_name.dart';
-import '../functions/display_button.dart';
 import '../styles.dart';
 import 'custom_gradien_widget.dart';
 
@@ -20,13 +19,13 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 40, bottom: 22),
+      margin: const EdgeInsets.only(top: 50, bottom: 22),
       child: Row(
         children: [
           Bounceable(
             onTap: backOnTap ??
                 () {
-                  displaySound();
+                  // displaySound();
                   Navigator.pop(context);
                 },
             child: Image.asset(
@@ -36,10 +35,8 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 1),
-          Container(
-            alignment: Alignment.center,
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.7,
-            height: MediaQuery.of(context).size.height * 0.07,
             child: CustomGradientWidget(
               child: Text(
                 title.tr(),
@@ -51,16 +48,21 @@ class CustomAppBar extends StatelessWidget {
           ),
           const Spacer(flex: 1),
           Bounceable(
-            onTap: () async {
-              await displaySound().then(
-                (value) {
-                  final String currentRoute =
-                      ModalRoute.of(context)!.settings.name!;
-                  if (currentRoute != RoutesName.settingsView) {
-                    Navigator.pushNamed(context, RoutesName.settingsView);
-                  }
-                },
-              );
+            onTap: () {
+              // await displaySound().then(
+              //   (value) {
+              //     final String currentRoute =
+              //         ModalRoute.of(context)!.settings.name!;
+              //     if (currentRoute != RoutesName.settingsView) {
+              //       Navigator.pushNamed(context, RoutesName.settingsView);
+              //     }
+              //   },
+              // );
+              final String currentRoute =
+                  ModalRoute.of(context)!.settings.name!;
+              if (currentRoute != RoutesName.settingsView) {
+                Navigator.pushNamed(context, RoutesName.settingsView);
+              }
             },
             child: Image.asset(
               AppImages.settingsIcon,

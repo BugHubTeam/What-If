@@ -56,7 +56,6 @@ class CustomContainerWith1border extends StatelessWidget {
                       colors: borderGradientColors ??
                           AppColors.borderGradientColors1,
                       radius: 1,
-                      
                     ),
 
           borderRadius: BorderRadius.circular(borderRadius!),
@@ -84,7 +83,7 @@ class CustomContainerWith1border extends StatelessWidget {
           ),
           child: iconImage == null
               ? Padding(
-                  padding: EdgeInsets.all(height ?? 3),
+                  padding: EdgeInsets.all(height ?? 0),
                   child: Text(
                     text,
                     style: style ?? Styles.textStyle16,

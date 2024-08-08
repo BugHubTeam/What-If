@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/functions/display_button.dart';
 import '../../../../../core/utils/styles.dart';
 import 'dart:ui' as ui;
 
@@ -16,12 +15,13 @@ class NoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = QuestionsCubit.get(context);
     return Bounceable(
-      onTap: () async {
-        await displaySound().then(
-          (value) {
-            cubit.answerTheQuestion(context);
-          },
-        );
+      onTap: () {
+        // await displaySound().then(
+        //   (value) {
+        //     cubit.answerTheQuestion(context);
+        //   },
+        // );
+        cubit.answerTheQuestion(context);
       },
       child: Row(
         textDirection: ui.TextDirection.ltr,

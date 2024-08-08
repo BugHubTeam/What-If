@@ -48,7 +48,7 @@ class QuestionsCubit extends Cubit<QuestionsState> {
   }
 
   void skipQuestion() {
-    if (_skipNumber < 5) {
+    if (_skipNumber < 2) {
       currentQuestion = questionList[currentQuestionIndex + 1];
       currentQuestionIndex++;
       _skipNumber++;

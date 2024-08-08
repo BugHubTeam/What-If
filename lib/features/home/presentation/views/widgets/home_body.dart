@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_gradien_widget.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
-import 'package:what_if/core/utils/functions/display_button.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'dart:ui' as ui;
 import '../../../../../config/routes/route_name.dart';
@@ -40,12 +39,13 @@ class HomeBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 75),
           child: CustomGradientButton(
             text: AppStrings.letsPlay.tr(),
-            onTap: () async {
-              await displaySound().then(
-                (value) {
-                  Navigator.pushNamed(context, RoutesName.catagoriesView);
-                },
-              );
+            onTap: () {
+              // await displaySound().then(
+              //   (value) {
+              //     Navigator.pushNamed(context, RoutesName.catagoriesView);
+              //   },
+              // );
+              Navigator.pushNamed(context, RoutesName.catagoriesView);
             },
           ),
         ),
@@ -58,12 +58,13 @@ class HomeBody extends StatelessWidget {
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.settings.tr(),
-                onTap: () async {
-                  await displaySound().then(
-                    (value) {
-                      Navigator.pushNamed(context, RoutesName.settingsView);
-                    },
-                  );
+                onTap: () {
+                  // await displaySound().then(
+                  //   (value) {
+                  //     Navigator.pushNamed(context, RoutesName.settingsView);
+                  //   },
+                  // );
+                  Navigator.pushNamed(context, RoutesName.settingsView);
                 },
               ),
             ),
@@ -73,12 +74,13 @@ class HomeBody extends StatelessWidget {
             Expanded(
               child: CustomGradientButton(
                 text: AppStrings.howToPlay.tr(),
-                onTap: () async {
-                  await displaySound().then(
-                    (value) {
-                      Navigator.pushNamed(context, RoutesName.howToPlayView);
-                    },
-                  );
+                onTap: () {
+                  // await displaySound().then(
+                  //   (value) {
+                  //     Navigator.pushNamed(context, RoutesName.howToPlayView);
+                  //   },
+                  // );
+                  Navigator.pushNamed(context, RoutesName.howToPlayView);
                 },
               ),
             ),
