@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/config/routes/route_name.dart';
-
 import 'sub_category_item.dart';
 
 class SubCategoriesGridView extends StatefulWidget {

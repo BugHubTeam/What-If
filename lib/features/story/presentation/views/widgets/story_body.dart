@@ -5,7 +5,7 @@ import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
-import 'package:what_if/core/utils/styles.dart';
+import 'package:what_if/features/story/presentation/views/widgets/story_builder.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 
 class StoryBody extends StatelessWidget {
@@ -44,15 +44,8 @@ class StoryBody extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: mediaQuery.height * 0.47,
-                    child: const SingleChildScrollView(
-                      child: Text(
-                        "Barcelona, one of the world's most storied football clubs, has a rich history steeped in glory. Founded in 1899, the club quickly became a symbol of Catalan culture and pride. Known for their distinctive style of play, tiki-taka, and their famous motto, Més que un club (More than a club), Barcelona has captivated fans with legendary players like Johan Cruyff... Founded in 1899, the club quickly became a symbol of Catalan culture and pride. Known for their distinctive style of play, tiki-taka, and their famous motto, Més que un club (More than a club), Barcelona has captivated fans with legendary players like Johan Cruyff",
-                        style: Styles.textStyle16Moul,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
+                      height: mediaQuery.height * 0.47,
+                      child: const StoryBuilder()),
                 ],
               ),
             ),

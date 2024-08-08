@@ -18,7 +18,6 @@ class QuestionsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
-    // var cubit = QuestionsCubit.get(context);
     var cubit = QuestionsCubit.get(context);
 
     return Padding(

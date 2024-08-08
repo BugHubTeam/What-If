@@ -4,6 +4,9 @@ import 'end_points.dart';
 class ApiManager {
   final Dio dio;
 
+  // declare your baseUrl
+  static const String baseUrl = EndPoints.baseUrl;
+
   ApiManager(this.dio);
 
   //get method.
@@ -22,7 +25,7 @@ class ApiManager {
     }
 
     Response response = await dio.get(
-      endPoint,
+      '$baseUrl$endPoint',
       options: Options(
         headers: headers,
       ),
@@ -48,7 +51,7 @@ class ApiManager {
     }
 
     Response response = await dio.post(
-      endPoint,
+      '$baseUrl$endPoint',
       data: data,
       options: Options(
         headers: headers,
@@ -75,7 +78,7 @@ class ApiManager {
     }
 
     Response response = await dio.post(
-      endPoint,
+      '$baseUrl$endPoint',
       data: data,
       options: Options(
         headers: headers,

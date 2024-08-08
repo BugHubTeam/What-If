@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:what_if/core/utils/app_colors.dart';
+import 'package:what_if/core/utils/components/custom_loading.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'package:what_if/features/questions/presentation/manager/questions_cubit.dart';
 import 'num_of_questions_widget.dart';
@@ -15,10 +17,17 @@ class QuestionsBuilder extends StatelessWidget {
     return BlocBuilder<QuestionsCubit, QuestionsState>(
       builder: (context, state) {
         if (state is QuestionsFailure) {
-          //handle failure here
+          Center(
+            child: Text(state.errorMessage),
+          );
         }
-        if (state is QuestionsLoading) {
-          // handle loading here
+        if (state is QuestionsSuccess) {}
+        if (state is QuestionsLoading || state is QuestionsInitial) {
+          return const Center(
+            child: CustomLoading(
+              color: AppColors.primaryColor,
+            ),
+          );
         }
 
         return Column(

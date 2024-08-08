@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_images.dart';
+import 'package:what_if/core/utils/constants.dart';
 import 'package:what_if/features/categories/data/models/category_model.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/components/custom_gradient_button.dart';
@@ -64,7 +65,6 @@ class CategoryItem extends StatelessWidget {
                   text: '',
                   enableButton2: true,
                   iconImage: AppImages.playIcon,
-                  // onTap: categoryModel.onTap,
                   onTap: () {
                     // await displaySound().then(
                     //   (value) {
@@ -72,11 +72,11 @@ class CategoryItem extends StatelessWidget {
                     //         context, RoutesName.subCategoryView);
                     //   },
                     // );
+                    categoryName = categoryModel.name;
                     if (index != 2) {
                       Navigator.pushNamed(
                         context,
                         RoutesName.subCategoryView,
-                        arguments: categoryModel.name,
                       );
                     }
                   },

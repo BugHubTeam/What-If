@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:what_if/config/routes/route_name.dart';
 import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_app_bar.dart';
+import 'package:what_if/core/utils/constants.dart';
 import 'package:what_if/features/sub_category/presentation/views/widgets/custom_text_field.dart';
 import 'package:what_if/features/sub_category/presentation/views/widgets/selected_sub_category.dart';
 import 'package:what_if/features/sub_category/presentation/views/widgets/sub_categories_grid_view.dart';
@@ -9,9 +10,7 @@ import 'package:what_if/features/sub_category/presentation/views/widgets/sub_cat
 class SubCategoryBody extends StatelessWidget {
   const SubCategoryBody({
     super.key,
-    required this.title,
   });
-  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class SubCategoryBody extends StatelessWidget {
             },
           ),
           SelectedSubCategory(
-            text: title,
+            text: categoryName,
           ),
           SizedBox(height: mediaQuery.height * 0.02),
           const CustomTextField(),

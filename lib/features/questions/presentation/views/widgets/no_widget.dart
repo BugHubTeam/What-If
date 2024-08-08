@@ -21,7 +21,7 @@ class NoWidget extends StatelessWidget {
         //     cubit.answerTheQuestion(context);
         //   },
         // );
-        cubit.answerTheQuestion(context);
+        cubit.answerTheQuestion(context, 'No');
       },
       child: Row(
         textDirection: ui.TextDirection.ltr,

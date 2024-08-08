@@ -20,7 +20,7 @@ class YesWidget extends StatelessWidget {
         //     cubit.answerTheQuestion(context);
         //   },
         // );
-        cubit.answerTheQuestion(context);
+        cubit.answerTheQuestion(context,'Yes');
       },
       child: Row(
         textDirection: ui.TextDirection.ltr,

@@ -20,4 +20,5 @@ List<CategoryModel> categoryList = [
     onTap: () {},
   ),
 ];
+String categoryName = '';
 /////////
