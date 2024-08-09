@@ -24,10 +24,17 @@ export class ApiFeature {
         return this
     }
 
-    filter(){
-        let {page , size , sort , select , ...filter} = this.queryData
-        filter = JSON.parse(JSON.stringify(filter).replace(/get|gte|lt|lte/g , match => `$${match}`))
-        this.mongooseQuery.find(filter)
-        return this
+    filter() {
+        let { page, size, sort, select, ...filter } = this.queryData;
+        // Convert filter values for specific keys to be case-insensitive
+        Object.keys(filter).forEach(key => {
+            if (key === 'name' && typeof filter[key] === 'string') {
+                filter[key] = { $regex: filter[key], $options: 'i' };  // Directly use the string with $regex and $options for case-insensitivity
+            }
+        });
+        // Replace get, gte, lt, lte with $get, $gte, $lt, $lte in filter keys
+        filter = JSON.parse(JSON.stringify(filter).replace(/get|gte|lt|lte/g, match => `$${match}`));
+        this.mongooseQuery.find(filter);
+        return this;
     }
 }
