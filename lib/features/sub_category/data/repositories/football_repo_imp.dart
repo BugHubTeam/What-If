@@ -12,11 +12,19 @@ class FootballRepoImp implements FootballRepo {
   FootballRepoImp(this._apiManager);
 
   @override
-  Future<Either<Failure, List<SubCategoryEntity>>> getFootballData(
-      {bool getPlayers = false}) async {
+  Future<Either<Failure, List<SubCategoryEntity>>> getFootballData({
+    bool getPlayers = false,
+    String? name,
+  }) async {
     try {
       var result = await _apiManager.get(
-        endPoint: getPlayers ? EndPoints.getPlayers : EndPoints.getClubs,
+        endPoint: getPlayers
+            ? name == null
+                ? EndPoints.getPlayers
+                : '${EndPoints.getPlayers}&name=$name'
+            : name == null
+                ? EndPoints.getClubs
+                : '${EndPoints.getClubs}&name=$name',
       );
 
       List<dynamic> dataList = result['data'];

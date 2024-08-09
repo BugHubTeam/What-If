@@ -11,6 +11,7 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subCategoryCubit = SubCategoryCubit.get(context);
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
@@ -57,11 +58,23 @@ class CustomTextField extends StatelessWidget {
         ),
         onChanged: (value) {
           if (categoryName == AppStrings.footBall) {
-            //
+            if (SubCategoryCubit.footBallType == AppStrings.clubs) {
+              if (value != '') {
+                subCategoryCubit.getFootballData(name: value);
+              } else {
+                subCategoryCubit.getFootballData();
+              }
+            } else {
+              if (value != '') {
+                subCategoryCubit.getFootballData(getPlayers: true, name: value);
+              } else {
+                subCategoryCubit.getFootballData(getPlayers: true);
+              }
+            }
           } else if (categoryName == AppStrings.tv) {
             value == ''
-                ? SubCategoryCubit.get(context).getMovies()
-                : SubCategoryCubit.get(context).getMovies(name: value);
+                ? subCategoryCubit.getMovies()
+                : subCategoryCubit.getMovies(name: value);
           }
         },
       ),

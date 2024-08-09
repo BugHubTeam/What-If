@@ -6,8 +6,13 @@ import '../repositories/football_repo.dart';
 class GetFootballDataUseCase {
   final FootballRepo _footballRepo;
   GetFootballDataUseCase(this._footballRepo);
-  Future<Either<Failure, List<SubCategoryEntity>>> execute(
-      {bool getPlayers = false}) async {
-    return await _footballRepo.getFootballData(getPlayers: getPlayers);
+  Future<Either<Failure, List<SubCategoryEntity>>> execute({
+    bool getPlayers = false,
+    String? name,
+  }) async {
+    return await _footballRepo.getFootballData(
+      getPlayers: getPlayers,
+      name: name,
+    );
   }
 }

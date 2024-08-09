@@ -50,9 +50,18 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                 borderColor: isClubs ? null : const Color(0xff424242),
                 borderWidth: isClubs ? null : 0,
                 onTap: () {
-                  if (!isClubs && categoryName == AppStrings.footBall) {
-                    SubCategoryCubit.get(context).getFootballData();
+                  if (categoryName == AppStrings.footBall) {
+                    if (!isClubs) {
+                      SubCategoryCubit.footBallType == AppStrings.clubs;
+                      SubCategoryCubit.get(context).getFootballData();
+                    } else {
+                      SubCategoryCubit.footBallType == AppStrings.players;
+                      SubCategoryCubit.get(context).getFootballData(
+                        getPlayers: true,
+                      );
+                    }
                   }
+
                   setState(() {
                     isClubs = true;
                   });
