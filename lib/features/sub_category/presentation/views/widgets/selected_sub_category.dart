@@ -5,6 +5,7 @@ import 'package:what_if/core/utils/components/custom_radio_button.dart';
 import 'package:what_if/core/utils/constants.dart';
 import 'package:what_if/core/utils/styles.dart';
 import '../../../../../core/utils/components/custom_container_with_1border.dart';
+import '../../cubit/sub_category_cubit.dart';
 
 class SelectedSubCategory extends StatefulWidget {
   const SelectedSubCategory({
@@ -49,6 +50,9 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                 borderColor: isClubs ? null : const Color(0xff424242),
                 borderWidth: isClubs ? null : 0,
                 onTap: () {
+                  if (!isClubs && categoryName == AppStrings.footBall) {
+                    SubCategoryCubit.get(context).getFootballData();
+                  }
                   setState(() {
                     isClubs = true;
                   });
@@ -86,6 +90,10 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                               : TextAlign.end,
                       borderColor: isClubs ? const Color(0xff424242) : null,
                       onTap: () {
+                        SubCategoryCubit.get(context).getFootballData(
+                          getPlayers: true,
+                        );
+
                         setState(() {
                           isClubs = false;
                         });

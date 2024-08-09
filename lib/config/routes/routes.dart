@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:what_if/core/utils/server_locator.dart';
 import 'package:what_if/features/categories/presentation/views/categories_view.dart';
 import 'package:what_if/features/home/presentation/views/home_view.dart';
 import 'package:what_if/features/how_to_play/presentation/views/how_to_play_view.dart';
@@ -7,6 +8,9 @@ import 'package:what_if/features/settings/presentation/manager/settings_cubit.da
 import 'package:what_if/features/settings/presentation/views/settings_view.dart';
 import 'package:what_if/features/splash/presentation/views/splash_view.dart';
 import 'package:what_if/features/story/presentation/views/story_view.dart';
+import 'package:what_if/features/sub_category/domain/use_cases/get_football_data_use_case.dart';
+import 'package:what_if/features/sub_category/domain/use_cases/get_movies_use_case.dart';
+import 'package:what_if/features/sub_category/presentation/cubit/sub_category_cubit.dart';
 import 'package:what_if/features/sub_category/presentation/views/sub_category_view.dart';
 import '../../features/questions/presentation/views/questions_view.dart';
 import 'route_name.dart';
@@ -55,7 +59,13 @@ class Routes {
         );
       case RoutesName.subCategoryView:
         return MaterialPageRoute(
-          builder: (context) => const SubCategoryView(),
+          builder: (context) => BlocProvider(
+            create: (context) => SubCategoryCubit(
+              getIt.get<GetMoviesUseCase>(),
+              getIt.get<GetFootballDataUseCase>(),
+            ),
+            child: const SubCategoryView(),
+          ),
           settings: settings,
         );
 

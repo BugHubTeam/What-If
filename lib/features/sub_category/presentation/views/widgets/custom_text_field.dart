@@ -2,8 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/styles.dart';
-
+import 'package:what_if/features/sub_category/presentation/cubit/sub_category_cubit.dart';
 import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key});
@@ -54,6 +55,15 @@ class CustomTextField extends StatelessWidget {
             ],
           ),
         ),
+        onChanged: (value) {
+          if (categoryName == AppStrings.footBall) {
+            //
+          } else if (categoryName == AppStrings.tv) {
+            value == ''
+                ? SubCategoryCubit.get(context).getMovies()
+                : SubCategoryCubit.get(context).getMovies(name: value);
+          }
+        },
       ),
     );
   }

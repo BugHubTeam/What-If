@@ -22,6 +22,7 @@ class QuestionsCubit extends Cubit<QuestionsState> {
   List<String> questionList = [];
   List<QuestionEntity> questionEntityList = [];
 
+  //get questions
   Future<void> getQuestions(
       {required String name, required String language}) async {
     emit(QuestionsLoading());

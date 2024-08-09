@@ -6,9 +6,11 @@ class CustomScaffold extends StatelessWidget {
     super.key,
     this.body,
     this.bgImage,
+    this.floatingActionButton,
   });
   final Widget? body;
   final String? bgImage;
+  final Widget? floatingActionButton;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,8 @@ class CustomScaffold extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: body,
+        floatingActionButton: floatingActionButton,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }

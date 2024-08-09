@@ -11,6 +11,7 @@ class ApiManager {
 
   //get method.
   Future<Map<String, dynamic>> get({
+    String? baseUrl2,
     required String endPoint,
     String? token,
   }) async {
@@ -25,7 +26,7 @@ class ApiManager {
     }
 
     Response response = await dio.get(
-      '$baseUrl$endPoint',
+      baseUrl2 == null ? '$baseUrl$endPoint' : '$baseUrl2$endPoint',
       options: Options(
         headers: headers,
       ),
@@ -89,13 +90,13 @@ class ApiManager {
   }
 }
 
-void initDio() {
-  Dio dio = Dio();
-  dio.options = BaseOptions(
-    baseUrl: EndPoints.baseUrl,
-    sendTimeout: const Duration(seconds: 20),
-    receiveTimeout: const Duration(seconds: 20),
-    connectTimeout: const Duration(seconds: 20),
-    headers: {},
-  );
-}
+// void initDio() {
+//   Dio dio = Dio();
+//   dio.options = BaseOptions(
+//     baseUrl: EndPoints.baseUrl,
+//     sendTimeout: const Duration(seconds: 20),
+//     receiveTimeout: const Duration(seconds: 20),
+//     connectTimeout: const Duration(seconds: 20),
+//     headers: {},
+//   );
+// }

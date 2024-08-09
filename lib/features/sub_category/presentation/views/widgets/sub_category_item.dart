@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/styles.dart';
+import 'package:what_if/features/sub_category/domain/entities/sub_category_entity.dart';
 
 class SubCategoryItem extends StatelessWidget {
   const SubCategoryItem({
     super.key,
     required this.isSelected,
+    this.subCategoryEntity,
   });
   final bool isSelected;
+  final SubCategoryEntity? subCategoryEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +29,25 @@ class SubCategoryItem extends StatelessWidget {
       ),
       child: Container(
         alignment: Alignment.bottomCenter,
-        padding: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.only(bottom: 5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: isSelected ? Colors.white : AppColors.unSelectedColor,
-          image: const DecorationImage(
-            image: AssetImage(
-              'assets/images/parcelona.png',
-            ),
+          image: DecorationImage(
+            image: subCategoryEntity?.image != null
+                ? NetworkImage(
+                    subCategoryEntity!.image,
+                  )
+                : const AssetImage('assets/images/barcelona') as ImageProvider,
+            fit: BoxFit.cover,
           ),
         ),
         child: Text(
-          ' Barcelona',
+          subCategoryEntity?.name ?? ' Barcelona',
           style: Styles.textStyle16Shrikh.copyWith(
-            color: Colors.black.withOpacity(isSelected ? 1 : 0.6),
+            color: Colors.black.withOpacity(isSelected ? 1 : 0.5),
           ),
+          textAlign: TextAlign.center,
         ),
       ),
     );

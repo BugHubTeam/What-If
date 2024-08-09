@@ -15,7 +15,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   setupServerLocator();
-  // initDio();
 
   runApp(
     EasyLocalization(
