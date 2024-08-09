@@ -10,7 +10,7 @@ class SubCategoryEntity extends Equatable {
   factory SubCategoryEntity.fromJson(Map<String, dynamic> json,
       {required bool isPlayer}) {
     return SubCategoryEntity(
-      name: json[isPlayer ? 'player' : 'club'],
+      name: json['name'],
       image: json[isPlayer ? 'player_logo' : 'club_logo'],
     );
   }

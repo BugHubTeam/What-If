@@ -13,7 +13,7 @@ class SubCategoryCubit extends Cubit<SubCategoryState> {
 
   static SubCategoryCubit get(context) => BlocProvider.of(context);
   static late String subCategoryName;
-  static String footBallType = AppStrings.clubs;
+  String footBallType = AppStrings.clubs;
 
   //getMovies
   Future<void> getMovies({String? name}) async {

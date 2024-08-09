@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final subCategoryCubit = SubCategoryCubit.get(context);
+
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
@@ -58,13 +59,19 @@ class CustomTextField extends StatelessWidget {
         ),
         onChanged: (value) {
           if (categoryName == AppStrings.footBall) {
-            if (SubCategoryCubit.footBallType == AppStrings.clubs) {
+            if (subCategoryCubit.footBallType == AppStrings.clubs) {
               if (value != '') {
                 subCategoryCubit.getFootballData(name: value);
               } else {
                 subCategoryCubit.getFootballData();
               }
-            } else {
+            } else if (subCategoryCubit.footBallType == AppStrings.players) {
+              if (value != '') {
+                subCategoryCubit.getFootballData(name: value, getPlayers: true);
+              } else {
+                subCategoryCubit.getFootballData();
+              }
+            }else {
               if (value != '') {
                 subCategoryCubit.getFootballData(getPlayers: true, name: value);
               } else {

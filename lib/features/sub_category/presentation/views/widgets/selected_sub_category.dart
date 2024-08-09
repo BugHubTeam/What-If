@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_strings.dart';
@@ -22,6 +24,7 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
   bool isClubs = true;
   @override
   Widget build(BuildContext context) {
+    final subCategoryCubit = SubCategoryCubit.get(context);
     var mediaQuery = MediaQuery.of(context).size;
     return Row(
       children: [
@@ -52,13 +55,8 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                 onTap: () {
                   if (categoryName == AppStrings.footBall) {
                     if (!isClubs) {
-                      SubCategoryCubit.footBallType == AppStrings.clubs;
+                      subCategoryCubit.footBallType = AppStrings.clubs;
                       SubCategoryCubit.get(context).getFootballData();
-                    } else {
-                      SubCategoryCubit.footBallType == AppStrings.players;
-                      SubCategoryCubit.get(context).getFootballData(
-                        getPlayers: true,
-                      );
                     }
                   }
 
@@ -99,6 +97,7 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                               : TextAlign.end,
                       borderColor: isClubs ? const Color(0xff424242) : null,
                       onTap: () {
+                        subCategoryCubit.footBallType = AppStrings.players;
                         SubCategoryCubit.get(context).getFootballData(
                           getPlayers: true,
                         );
