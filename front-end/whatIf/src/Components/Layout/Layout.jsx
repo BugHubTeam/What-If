@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <>
 
-    {/* <Navbar/> */}
+    <Navbar/>
     
   <div className="container mx-auto py-10">
     <Outlet/>
