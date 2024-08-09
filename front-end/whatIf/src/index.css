@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --main-color: linear-gradient(93.74deg, #01BEE6 4.36%, #0E90C7 13.16%, #1A62A9 23.24%, #243E91 32.91%, #2B2480 41.92%, #301476 50.01%, #310F72 56.42%, #301173 73.26%, #2E1878 80.48%, #2B2580 85.88%, #26378C 90.35%, #204E9C 94.27%, #186AAE 97.79%, #0F8CC5 101.01%, #04B2DE 103.91%, #01BEE6 104.68%);
+}
+
+/* home page */
+
+.homePage{
+    margin-top: 130px;
+}
+
+.fs-64{
+    font-size: 50px;
+    line-height: 60px;
+    background:  var(--main-color);   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+ .w-secTitle{
+    width: 60%;
+ }
+
+ .fs-8{
+    font-size: 12px;
+    line-height: 10px;
+ }
+
+ .w-90{
+    width: 90%;
+    margin-top: 140px !important;
+ }
+
+ .mobileImage{
+    top: -85%;
+    left: -15% !important;
+    transform: rotate(-20deg);
+ }
+
+ .boxImage{
+    top: -25%;
+    right: 20% !important;
+    /* transform: rotate(-20deg); */
+ }
+
+ .img2{
+    width: 230px;  /* Example width */
+    height: 230px; /* Make height equal to width */
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px; 
+    background: linear-gradient(#BD1E97, #3B00FF, #03BAE5);
+    position: relative; 
+ }
+
+ .bg-maincolor{
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 50px;
+    background:  var(--main-color);   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+ }
+
+ .zenDotes{
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+ .middle-section3{
+    background: linear-gradient(
+        to bottom,
+        #291165,
+        #261553,
+        #291165,
+        #36237b,
+        #312875,
+        #3B438B,
+        #3E5095,
+        #3B458C
+    );
+    border: 5px solid;
+    border-image: linear-gradient(
+        to right,
+        #BD1E97,
+        #3B00FF,
+        #03BAE5
+    );
+    border-image-slice: 1;
+ }
+
+ .customColor{
+    font-family: "Roboto Slab", sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+    line-height: 50px;
+ }
+
+ .message{
+    top: -20%;
+    right: 40%;
+ }
+
+ .messageText{
+    line-height: 20px;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 900;
+    top: -12%;
+    right: 55%;
+ }

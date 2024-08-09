@@ -22,7 +22,7 @@ export default function Navbar() {
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
-        <Link to="home" className="block py-2 px-3 md:p-0">HOME</Link>
+        <Link to="/" className="block py-2 px-3 md:p-0">HOME</Link>
       </li>
       <li>
         <Link to="app" className="block py-2 px-3 md:p-0">WHATEIF?!APP</Link>
