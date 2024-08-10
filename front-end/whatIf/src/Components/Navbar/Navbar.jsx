@@ -19,7 +19,7 @@ export default function Navbar() {
       <span className=''>IF?!</span>
       </div>
   </Link>
-  
+ 
   <div className="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex justify-center md:justify-between md:p-0 mt-4 text-xl font-bold md:space-x-8 rtl:space-x-reverse  ">
       <li className='relative'>
