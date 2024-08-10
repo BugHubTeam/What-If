@@ -7,7 +7,7 @@ import whatIfImage from '../../assets/whatIfImage.png'
 export default function WhatIfApp() {
   return (
     <div className='appPage'>
-      <div className="w-50 m-auto">
+      <div className="w-50 m-auto text-center">
         <p className='fs-64 fs-1 fw-bold'>What If App</p>
         <p className='mt-2 fw-bold'>Millions of scenairos on every topic </p>
       </div>
@@ -32,11 +32,11 @@ export default function WhatIfApp() {
             </div>
           </a>
         </div>
-        <p className='my-4 fw-bold'>Scan this QR code to download the app now</p>
+        <p className='my-4 fw-bold text-center'>Scan this QR code to download the app now</p>
         <div className="w-25 m-auto">
           <img src={qrCode} className='w-100' alt="" />
         </div>
-        <div className="w-50 m-auto fw-bold">
+        <div className="w-50 m-auto fw-bold text-center">
         <p>"What If" is your ultimate destination for exploring alternate realities <br/> and outcomes. Whether you're into TV shows, movies, history, or <br/> everyday life events, you'll find endless scenarios to ignite your <br/> imagination and creativity. Dive in and<br/>
         discover new possibilities!</p>
         </div>

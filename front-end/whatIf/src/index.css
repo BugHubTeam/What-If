@@ -56,7 +56,7 @@ height: 4px;
 /* home page */
 
 .homePage , .appPage{
-    margin-top: 130px;
+    margin-top: 35px;
 }
 
 .fs-64{
@@ -160,6 +160,7 @@ height: 4px;
     line-height: 20px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 900;
-    top: -12%;
-    right: 55%;
+    top: -14%;
+    right: 53%;
+    font-size: 13px;
  }

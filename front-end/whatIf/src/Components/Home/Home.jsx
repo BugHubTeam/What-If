@@ -15,10 +15,10 @@ import mainLogo from '../../assets/mainLogo.png'
 export default function Home() {
   return (
     <div className='homePage'>
-      <div className="wInPhone w-50 m-auto">
+      <div className="wInPhone w-50 m-auto text-center">
         <p className='fs-64 fw-bold'>What If - A Game for the Imaginative Thinker</p>
       </div>
-      <div className="w-secTitle fw-bold m-auto mt-3 mb-5">
+      <div className="w-secTitle fw-bold m-auto mt-3 mb-5 text-center">
         <h4>The "What If" game lets players explore alternate scenarios and outcomes in sports, <br /> movies, and life.</h4>
       </div>
       <div className="middle-section">
