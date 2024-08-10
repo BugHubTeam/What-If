@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+#root{
+   padding: 0%;
+
+}
+
+
 .active{
     color: white;
-    font-size: 25px;
+    font-size: 21px;
 }
 
 
 .active::after{
     content: ".";
     position: absolute;
-    bottom: -0.5rem;
+    bottom: 20%;
     font-weight: 900;
     font-size: 4.5rem;
     left: 50%;
