@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/Logo.svg'
 
 
@@ -9,26 +9,27 @@ export default function Navbar() {
     
     
 
-<nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 ">
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-around mr-auto p-4">
+<nav className="bg-gradient-to-r from-blue-400 via-violet-900 to-blue-500 fixed w-full z-20 top-0 left-0">
+  <div className="max-w-screen-xl flex flex-wrap items-center justify-around mr-auto">
   <Link to="" className="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src={logo} className="h-8" alt="WhatIf Logo"/>
-      <div className="appName self-center text-2xl font-semibold whitespace-nowrap">
-      <span className="">WHAT IF ?</span>
-      
+      <img src={logo} className="" width={"100px"} alt="WhatIf Logo"/>
+      <div className="appName self-center text-3xl font-bold whitespace-nowrap font-serif
+      bg-gradient-to-b from-slate-50 via-pink-200 to-pink-500 inline-block text-transparent bg-clip-text">
+      <p className="">WHAT</p>
+      <span className=''>IF?!</span>
       </div>
   </Link>
   
-  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <Link to="home" className="block py-2 px-3 md:p-0">HOME</Link>
+  <div className="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul className="flex justify-center md:justify-between md:p-0 mt-4 text-xl font-bold md:space-x-8 rtl:space-x-reverse  ">
+      <li className='relative'>
+        <NavLink to="/" className=" block py-2 px-3 md:p-0 text-slate-200">HOME</NavLink>
       </li>
-      <li>
-        <Link to="app" className="block py-2 px-3 md:p-0">WHATEIF?!APP</Link>
+      <li className='relative'>
+        <NavLink to="app" className="block py-2 px-3 md:p-0 text-slate-300">WHATEIF?!APP</NavLink>
       </li>
-      <li>
-        <Link to="about" className="block py-2 px-3 md:p-0">ABOUT US</Link>
+      <li className='relative'>
+        <NavLink to="about" className="block py-2 px-3 md:p-0 text-slate-300">ABOUT US</NavLink>
       </li>
     </ul>
   </div>
