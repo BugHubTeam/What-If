@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import './index.css'
+import'@fortawesome/fontawesome-free/css/all.min.css'
 
 AOS.init();
 createRoot(document.getElementById('root')).render(

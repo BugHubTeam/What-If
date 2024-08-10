@@ -14,11 +14,9 @@ import WhatIfApp from './Components/WhatIfApp/WhatIfApp'
 let browser = createBrowserRouter([
   {
     path: "", element: <Layout />, children: [
-
-      { index: true, element: <Home /> },
-      { path: "about", element: <About /> },
-      { path: "app", element: <WhatIfApp /> },
-
+{index:true, element:<Home/>},
+{path:"about" , element:<About/>},
+{path:"app" , element:<WhatIfApp/>},
     ]
   }
 
