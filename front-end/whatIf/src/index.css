@@ -60,12 +60,11 @@ height: 4px;
 
 }
 
+.nav-z{
+   z-index: 8492380343;
+}
 
 /* home page */
-
-.homePage , .appPage{
-    margin-top: 35px;
-}
 
 .fs-64{
     font-size: 50px;

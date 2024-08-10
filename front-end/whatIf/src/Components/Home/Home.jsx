@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <div className="middle-section">
         <div className="download-links w-50 m-auto d-flex justify-content-center mt-5">
-          <a href="#" target='_blank' className='me-3'>
+          <a href="#" target='_blank' className='me-3 nav-z'>
             <div className="p-1 bg-black rounded-3 d-flex">
               <img src={appleLogo} className='w-35 me-1' alt="" />
               <div className="">
@@ -32,7 +32,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" target='_blank' className='ms-3'>
+          <a href="#" target='_blank' className='ms-3 nav-z'>
             <div className="p-1 bg-black rounded-3 d-flex">
               <img src={googleLogo} className='w-25 me-1' alt="" />
               <div className="">

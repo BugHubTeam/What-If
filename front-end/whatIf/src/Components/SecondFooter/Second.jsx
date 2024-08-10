@@ -37,11 +37,11 @@ est .2024
 </div>
 
 <div className="icons text-slate-950 text-4xl">
-  <Link to=""><i className="fa-brands fa-square-facebook px-1 text-blue-600"></i></Link>
-  <Link to=""><i className="fa-brands fa-square-instagram px-1 text-pink-600"></i></Link>
-  <Link to=""><i className="fa-brands fa-square-twitter px-1 text-sky-500"></i></Link>
-  <Link to=""><i className="fa-brands fa-tiktok px-1"></i></Link>
-  <Link to="https://www.linkedin.com/company/bughubteam/?viewAsMember=true"><i className="fa-brands fa-linkedin px-1 text-blue-800"></i></Link>
+  <Link to="" target='_blank'><i className="fa-brands fa-square-facebook px-1 text-blue-600"></i></Link>
+  <Link to="" target='_blank'><i className="fa-brands fa-square-instagram px-1 text-pink-600"></i></Link>
+  <Link to="" target='_blank'><i className="fa-brands fa-square-twitter px-1 text-sky-500"></i></Link>
+  <Link to="" target='_blank'><i className="fa-brands fa-tiktok px-1"></i></Link>
+  <Link to="https://www.linkedin.com/company/bughubteam/?viewAsMember=true" target='_blank'><i className="fa-brands fa-linkedin px-1 text-blue-800"></i></Link>
 </div>
 
 </div>
