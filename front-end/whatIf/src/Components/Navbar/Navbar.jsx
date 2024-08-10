@@ -26,7 +26,7 @@ export default function Navbar() {
         <NavLink to="/" className=" block py-1 px-3 md:p-0 text-slate-200">HOME</NavLink>
       </li>
       <li className='relative'>
-        <NavLink to="app" className="block py-1 px-3 md:p-0 text-slate-300">WHATEIF?!APP</NavLink>
+        <NavLink to="app" className="block py-1 px-3 md:p-0 text-slate-300">WHATIF?!APP</NavLink>
       </li>
       <li className='relative'>
         <NavLink to="about" className="block py-1 px-3 md:p-0 text-slate-300">ABOUT US</NavLink>
