@@ -16,7 +16,7 @@ export default function About() {
 
    
    
-   <div className="content md:w-1/2  text-slate-50 w-full px-5 text-center leading-7 ">
+   <div className="content md:w-1/2  text-slate-50 w-full px-5 text-center leading-7 py-10">
           <h2 className=" text-4xl font-bold py-5">ABOUT US</h2>
 
          <div className="relative">
@@ -31,7 +31,7 @@ export default function About() {
           </p>
          </div>
 
-         <div className="relative">
+         <div className="relative ">
          <p className="pt-3 after:absolute after:content-[''] after:w-20 after:h-1 after:bg-fuchsia-500 after:-bottom-4 after:left-1/2 after:-translate-x-1/2">
           Join our community and discover amazing stories. "What If?" lets you dream up incredible scenarios and share them with the world. Dive into the fun , see where your imagination takes you!
           </p>
@@ -39,7 +39,7 @@ export default function About() {
 
         </div>
 
-<div className="image w-full  md:w-1/2">
+<div className="image w-full  md:w-1/2 ">
   <img src={first} className='w-full' alt="" />
 </div>
    
@@ -152,7 +152,7 @@ export default function About() {
 
 
 
-<div className="last w-full lg:w-3/4 text-center mx-auto lg:text-3xl font-bold flex px-8">
+<div className="last w-full lg:w-3/4 text-center mx-auto lg:text-3xl font-bold flex ">
 
 <img src={box1} className='w-20' alt="" />
   <p>For partnership and business inquiries, please contact <span className='bg-gradient-to-r from-blue-400 via-violet-900 to-blue-500 inline-block text-transparent bg-clip-text underline decoration-blue-600'>bughub.sales@gmail.com</span></p>
