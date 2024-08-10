@@ -14,7 +14,7 @@ export default function WhatIfApp() {
       <div className="middle-section">
         <div className="download-links w-50 m-auto d-flex justify-content-center mt-4">
           <a href="#" target='_blank' className='me-3' data-aos="fade-right" data-aos-duration="2000">
-            <div className="p-1 bg-black rounded-3 d-flex">
+            <div className="p-1 bg-black rounded-3 d-flex box">
               <img src={appleLogo} className='w-35 me-1' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>Download on the </p>
@@ -23,8 +23,8 @@ export default function WhatIfApp() {
             </div>
           </a>
           <a href="#" target='_blank' className='ms-3' data-aos="fade-left" data-aos-duration="2000">
-            <div className="p-1 bg-black rounded-3 d-flex">
-              <img src={googleLogo} className='w-25 me-1' alt="" />
+            <div className="p-1 bg-black rounded-3 d-flex box">
+              <img src={googleLogo} className='w-25 me-1 googleLogo' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>GET IT ON &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <h4 className='text-white fw-bold'>Google Play</h4>
@@ -36,7 +36,7 @@ export default function WhatIfApp() {
         <div className="w-25 m-auto">
           <img src={qrCode} className='w-100' alt="" />
         </div>
-        <div className="w-50 m-auto fw-bold text-center">
+        <div className="w-50 m-auto fw-bold text-center textQr">
         <p>"What If" is your ultimate destination for exploring alternate realities <br/> and outcomes. Whether you're into TV shows, movies, history, or <br/> everyday life events, you'll find endless scenarios to ignite your <br/> imagination and creativity. Dive in and<br/>
         discover new possibilities!</p>
         </div>

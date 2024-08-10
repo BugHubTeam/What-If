@@ -24,7 +24,7 @@ export default function Home() {
       <div className="middle-section">
         <div className="download-links w-50 m-auto d-flex justify-content-center mt-5">
           <a href="#" target='_blank' className='me-3 nav-z'>
-            <div className="p-1 bg-black rounded-3 d-flex">
+            <div className="p-1 bg-black rounded-3 d-flex box">
               <img src={appleLogo} className='w-35 me-1' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>Download on the </p>
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           </a>
           <a href="#" target='_blank' className='ms-3 nav-z'>
-            <div className="p-1 bg-black rounded-3 d-flex">
+            <div className="p-1 bg-black rounded-3 d-flex box">
               <img src={googleLogo} className='w-25 me-1' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>GET IT ON &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
@@ -58,15 +58,15 @@ export default function Home() {
           <img src={circle1} className='img2' alt="" />
         </div>
         <div className="col-md-8" data-aos="fade-left" data-aos-duration="2500">
-          <p className='bg-maincolor fs-2'>Imagine alternate realities with "What If"</p>
-          <p className='zenDotes mt-1'>Imagine different outcomes: Lionel Messi at Real <br /> Madrid or Iron Man's continued adventures. <br /> Reimagine movie endings and life events <br />
+          <p className='bg-maincolor fs-2 resInPhone'>Imagine alternate realities with "What If"</p>
+          <p className='zenDotes mt-1 resInPhone'>Imagine different outcomes: Lionel Messi at Real <br /> Madrid or Iron Man's continued adventures. <br /> Reimagine movie endings and life events <br />
             with friends, sparking <br />creative Chats.</p>
         </div>
       </div>
       <div className="middle-section3 row w-75 m-auto mt-5 align-items-center p-3">
         <div className="col-md-8">
-          <p className='customColor text-white fs-2'>Curious About Football's Alternate Universes?</p>
-          <p className='zenDotes mt-1 text-white'>Let's Test Your Imagination! Explore "What If" <br /> scenarios related to sports clubs, players,<br />
+          <p className='customColor text-white fs-2 resInPhone'>Curious About Football's Alternate Universes?</p>
+          <p className='zenDotes mt-1 text-white resInPhone'>Let's Test Your Imagination! Explore "What If" <br /> scenarios related to sports clubs, players,<br />
             and matches. Share your creative<br />
             predictions and compare<br />
             them with others!</p>
@@ -80,16 +80,16 @@ export default function Home() {
           <img src={circle3} className='img2' alt="" />
         </div>
         <div className="col-md-8" data-aos="fade-left" data-aos-duration="2500">
-          <p className='bg-maincolor fs-2'>Discover More Categories Like TV Shows with "What If"</p>
-          <p className='zenDotes mt-1'>Reimagine alternate endings for your favorite <br /> TV shows and explore scenarios with<br />
+          <p className='bg-maincolor fs-2 resInPhone'>Discover More Categories Like TV Shows with "What If"</p>
+          <p className='zenDotes mt-1 resInPhone'>Reimagine alternate endings for your favorite <br /> TV shows and explore scenarios with<br />
             different choices and plot twists.<br />Share your creative ideas with <br />friends and compare them <br />to the originals!</p>
         </div>
       </div>
       <div className="last-section row w-75 m-auto mt-5 align-items-center">
         <div className="col-md-5 pt-4">
-        <div className="d-flex justify-content-center">
+        <div className="d-flex links justify-content-center">
           <a href="#" target='_blank' className='me-3'>
-            <div className="p-1 bg-black rounded-3 d-flex">
+            <div className="p-1 bg-black rounded-3 d-flex box">
               <img src={appleLogo} className='w-35 me-1' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>Download on the </p>
@@ -98,8 +98,8 @@ export default function Home() {
             </div>
           </a>
           <a href="#" target='_blank' className='ms-3'>
-            <div className="p-1 bg-black rounded-3 d-flex">
-              <img src={googleLogo} className='w-25 me-1' alt="" />
+            <div className="p-1 bg-black rounded-3 d-flex box">
+              <img src={googleLogo} className='w-25 me-1 googleLogo' alt="" />
               <div className="">
                 <p className='fs-8 text-white fw-lighter'>GET IT ON &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <h4 className='text-white fw-bold'>Google Play</h4>
