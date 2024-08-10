@@ -21,15 +21,15 @@ export default function Navbar() {
   </Link>
  
   <div className="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul className="flex justify-center md:justify-between md:p-0 mt-4 text-xl font-bold md:space-x-8 rtl:space-x-reverse  ">
+    <ul className="flex justify-center md:justify-between md:p-0 mt-4 text-lg font-bold md:space-x-8 rtl:space-x-reverse ">
       <li className='relative'>
-        <NavLink to="/" className=" block py-2 px-3 md:p-0 text-slate-200">HOME</NavLink>
+        <NavLink to="/" className=" block py-1 px-3 md:p-0 text-slate-200">HOME</NavLink>
       </li>
       <li className='relative'>
-        <NavLink to="app" className="block py-2 px-3 md:p-0 text-slate-300">WHATEIF?!APP</NavLink>
+        <NavLink to="app" className="block py-1 px-3 md:p-0 text-slate-300">WHATEIF?!APP</NavLink>
       </li>
       <li className='relative'>
-        <NavLink to="about" className="block py-2 px-3 md:p-0 text-slate-300">ABOUT US</NavLink>
+        <NavLink to="about" className="block py-1 px-3 md:p-0 text-slate-300">ABOUT US</NavLink>
       </li>
     </ul>
   </div>
