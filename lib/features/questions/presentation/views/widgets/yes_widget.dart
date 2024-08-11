@@ -6,6 +6,8 @@ import 'package:what_if/features/questions/presentation/manager/questions_cubit.
 import '../../../../../core/utils/app_colors.dart';
 import 'dart:ui' as ui;
 
+import '../../../../../core/utils/fonts.dart';
+
 class YesWidget extends StatelessWidget {
   const YesWidget({super.key, required this.text});
   final String text;
@@ -20,7 +22,7 @@ class YesWidget extends StatelessWidget {
         //     cubit.answerTheQuestion(context);
         //   },
         // );
-        cubit.answerTheQuestion(context,'Yes');
+        cubit.answerTheQuestion(context, 'Yes');
       },
       child: Row(
         textDirection: ui.TextDirection.ltr,
@@ -30,12 +32,15 @@ class YesWidget extends StatelessWidget {
             style: Styles.textStyle24.copyWith(
               color: AppColors.greenDark,
               fontSize: 32,
+              fontFamily: context.locale.toString() == 'en'
+                  ? null
+                  : Fonts.notoSansArabicFont,
             ),
           ),
           const Icon(
-            Icons.arrow_forward,
+            Icons.check_rounded,
             color: AppColors.greenDark,
-            size: 45,
+            size: 40,
             textDirection: ui.TextDirection.ltr,
           ),
         ],

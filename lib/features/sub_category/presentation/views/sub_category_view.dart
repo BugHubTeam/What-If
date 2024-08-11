@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/components/custom_scaffold.dart';
 import 'package:what_if/features/sub_category/presentation/cubit/sub_category_cubit.dart';
 import '../../../../config/routes/route_name.dart';
@@ -28,21 +30,31 @@ class _SubCategoryViewState extends State<SubCategoryView> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      body: const SubCategoryBody(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          QuestionsCubit.get(context).getQuestions(
-            name: SubCategoryCubit.subCategoryName,
-            language: context.locale.toString() == 'en' ? 'english' : 'arabic',
-          );
-          Navigator.pushNamed(context, RoutesName.questionsView);
-        },
-        child: const Icon(
-          Icons.task_alt,
-        size: 30,
-        ),
-      ),
+    return BlocBuilder<SubCategoryCubit, SubCategoryState>(
+      builder: (context, state) {
+        return CustomScaffold(
+          body: const SubCategoryBody(),
+          floatingActionButton: state is SubCategorySuccess
+              ? FloatingActionButton(
+                  backgroundColor: AppColors.primaryColor,
+                  onPressed: () {
+                    QuestionsCubit.get(context).getQuestions(
+                      name: SubCategoryCubit.subCategoryName,
+                      language: context.locale.toString() == 'en'
+                          ? 'english'
+                          : 'arabic',
+                    );
+                    Navigator.pushNamed(context, RoutesName.questionsView);
+                  },
+                  child: const Icon(
+                    Icons.check,
+                    size: 30,
+                    color: Colors.white,
+                  ),
+                )
+              : null,
+        );
+      },
     );
   }
 }

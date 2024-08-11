@@ -6,6 +6,7 @@ import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/components/custom_container.dart';
 import 'package:what_if/core/utils/components/custom_gradient_button.dart';
 import 'package:what_if/features/story/presentation/views/widgets/story_builder.dart';
+import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 
 class StoryBody extends StatelessWidget {
@@ -44,13 +45,14 @@ class StoryBody extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                      height: mediaQuery.height * 0.47,
-                      child: const StoryBuilder()),
+                    height: mediaQuery.height * 0.47,
+                    child: const StoryBuilder(),
+                  ),
                 ],
               ),
             ),
           ),
-          SizedBox(height: mediaQuery.height * 0.035),
+          SizedBox(height: mediaQuery.height * 0.05),
           FadeInUp(
             duration: const Duration(milliseconds: 1300),
             child: Padding(
@@ -58,6 +60,7 @@ class StoryBody extends StatelessWidget {
               child: CustomGradientButton(
                 text: AppStrings.playAgain.tr(),
                 enableButton2: true,
+                iconImage: AppImages.replayIcon,
                 onTap: () {
                   // await displaySound().then(
                   //   (value) {
@@ -75,24 +78,24 @@ class StoryBody extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: mediaQuery.height * 0.035),
-          FadeInUp(
-            delay: const Duration(seconds: 2),
-            duration: const Duration(milliseconds: 1300),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 120),
-              child: CustomGradientButton(
-                text: AppStrings.share.tr(),
-                enableButton2: true,
-                onTap: () {
-                  // await displaySound().then(
-                  //   (value) {},
-                  // );
-                },
-              ),
-            ),
-          ),
-          SizedBox(height: mediaQuery.height * 0.035),
+          SizedBox(height: mediaQuery.height * 0.1),
+          // FadeInUp(
+          //   delay: const Duration(seconds: 2),
+          //   duration: const Duration(milliseconds: 1300),
+          //   child: Padding(
+          //     padding: const EdgeInsets.symmetric(horizontal: 120),
+          //     child: CustomGradientButton(
+          //       text: AppStrings.share.tr(),
+          //       enableButton2: true,
+          //       onTap: () {
+          //         // await displaySound().then(
+          //         //   (value) {},
+          //         // );
+          //       },
+          //     ),
+          //   ),
+          // ),
+          // SizedBox(height: mediaQuery.height * 0.05),
         ],
       ),
     );

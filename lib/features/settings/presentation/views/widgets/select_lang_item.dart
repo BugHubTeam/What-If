@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/styles.dart';
 
 import '../../../../../core/utils/components/custom_radio_button.dart';
+import '../../../../../core/utils/fonts.dart';
 
 class SelectLangItem extends StatelessWidget {
   const SelectLangItem({
@@ -49,7 +51,11 @@ class SelectLangItem extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 title,
-                style: Styles.textStyle16Inter,
+                style: Styles.textStyle16Inter.copyWith(
+                  fontFamily: context.locale.toString() == 'en'
+                      ? null
+                      : Fonts.notoSansArabicFont,
+                ),
               ),
               const Spacer(),
               SizedBox(

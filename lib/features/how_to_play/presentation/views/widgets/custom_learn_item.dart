@@ -25,7 +25,9 @@ class CustomLearnItem extends StatelessWidget {
           title.tr(),
           style: Styles.textStyle24.copyWith(
             color: AppColors.primaryColor,
-            fontFamily: Fonts.zenDotsFontFamily,
+            fontFamily: context.locale.toString() == 'en'
+                ? Fonts.zenDotsFontFamily
+                : Fonts.notoSansArabicFont,
           ),
           textAlign: TextAlign.center,
         ),
@@ -34,7 +36,9 @@ class CustomLearnItem extends StatelessWidget {
           subTitle.tr(),
           style: Styles.textStyle16.copyWith(
             color: Colors.black,
-            fontFamily: Fonts.zenDotsFontFamily,
+            fontFamily: context.locale.toString() == 'en'
+                ? Fonts.zenDotsFontFamily
+                : Fonts.tajawalFont,
           ),
           textAlign: TextAlign.center,
         ),
@@ -42,9 +46,7 @@ class CustomLearnItem extends StatelessWidget {
         //divider
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 140, vertical: 18),
-          child: enableDivider!
-              ? const CustomDivider()
-              : null,
+          child: enableDivider! ? const CustomDivider() : null,
         ),
       ],
     );

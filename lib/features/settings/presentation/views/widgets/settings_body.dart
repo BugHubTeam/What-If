@@ -10,6 +10,7 @@ import 'package:what_if/core/utils/styles.dart';
 import 'package:what_if/features/settings/presentation/manager/settings_cubit.dart';
 import '../../../../../config/routes/route_name.dart';
 import '../../../../../core/utils/components/custom_gradient_button.dart';
+import '../../../../../core/utils/fonts.dart';
 import 'select_lang_builder.dart';
 
 class SettingsBody extends StatelessWidget {
@@ -35,7 +36,10 @@ class SettingsBody extends StatelessWidget {
                     child: Text(
                       AppStrings.pleaseChooseYourLanguage.tr(),
                       style: Styles.textStyle24.copyWith(
-                        color: Colors.white,
+                        color: Colors.black,
+                        fontFamily: context.locale.toString() == 'en'
+                            ? null
+                            : Fonts.notoSansArabicFont,
                       ),
                     ),
                   ),
@@ -49,7 +53,11 @@ class SettingsBody extends StatelessWidget {
                     children: [
                       Text(
                         AppStrings.yourLanguagePreference.tr(),
-                        style: Styles.textStyle12,
+                        style: Styles.textStyle12.copyWith(
+                          fontFamily: context.locale.toString() == 'en'
+                              ? null
+                              : Fonts.notoSansArabicFont,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ],

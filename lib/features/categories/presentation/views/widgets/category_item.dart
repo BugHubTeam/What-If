@@ -56,13 +56,14 @@ class CategoryItem extends StatelessWidget {
               Text(
                 categoryModel.name.tr(),
                 style: Styles.textStyle24.copyWith(
-                  fontFamily: Fonts.zenDotsFontFamily,
+                  fontFamily: context.locale.toString() == 'en'
+                      ? Fonts.zenDotsFontFamily
+                      : Fonts.notoSansArabicFont,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 44),
                 child: CustomGradientButton(
-                  text: '',
                   enableButton2: true,
                   iconImage: AppImages.playIcon,
                   onTap: () {

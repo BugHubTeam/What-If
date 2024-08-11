@@ -24,6 +24,9 @@ class SubCategoryCubit extends Cubit<SubCategoryState> {
         emit(SubCategoryFailure(failure.message));
       },
       (movies) {
+        if (movies.isNotEmpty) {
+          subCategoryName = movies[0].name;
+        }
         emit(SubCategorySuccess(movies));
       },
     );
@@ -42,7 +45,9 @@ class SubCategoryCubit extends Cubit<SubCategoryState> {
         emit(SubCategoryFailure(failure.message));
       },
       (footballData) {
-        subCategoryName = footballData[0].name;
+        if (footballData.isNotEmpty) {
+          subCategoryName = footballData[0].name;
+        }
         emit(SubCategorySuccess(footballData));
       },
     );

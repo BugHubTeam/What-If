@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_colors.dart';
+import 'package:what_if/core/utils/fonts.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'package:what_if/features/sub_category/presentation/cubit/sub_category_cubit.dart';
 import '../../../../../core/utils/app_strings.dart';
@@ -35,7 +36,12 @@ class CustomTextField extends StatelessWidget {
           ),
           fillColor: const Color(0xff261452),
           hintText: AppStrings.search.tr(),
-          hintStyle: Styles.textStyle16Inter.copyWith(color: Colors.grey),
+          hintStyle: Styles.textStyle16Inter.copyWith(
+            color: Colors.grey,
+            fontFamily: context.locale.toString() == 'en'
+                ? null
+                : Fonts.notoSansArabicFont,
+          ),
           prefixIcon: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -71,7 +77,7 @@ class CustomTextField extends StatelessWidget {
               } else {
                 subCategoryCubit.getFootballData();
               }
-            }else {
+            } else {
               if (value != '') {
                 subCategoryCubit.getFootballData(getPlayers: true, name: value);
               } else {

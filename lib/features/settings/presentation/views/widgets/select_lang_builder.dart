@@ -48,7 +48,7 @@ class _SelectLangBuilderState extends State<SelectLangBuilder> {
         //English
         SelectLangItem(
           title: AppStrings.englishUK.tr(),
-          flagImage: AppImages.flagUK,
+          flagImage: AppImages.flagUSA,
           onTap: () {
             setState(() {
               isEnglish = true;

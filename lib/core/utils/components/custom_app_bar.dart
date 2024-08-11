@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_images.dart';
 import 'package:what_if/core/utils/app_strings.dart';
+import 'package:what_if/core/utils/fonts.dart';
 import '../../../config/routes/route_name.dart';
 import '../styles.dart';
 import 'custom_gradien_widget.dart';
@@ -40,7 +41,11 @@ class CustomAppBar extends StatelessWidget {
             child: CustomGradientWidget(
               child: Text(
                 title.tr(),
-                style: Styles.textStyle24,
+                style: Styles.textStyle24.copyWith(
+                  fontFamily: context.locale.toString() == 'en'
+                      ? null
+                      : Fonts.notoSansArabicFont,
+                ),
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.clip,
               ),

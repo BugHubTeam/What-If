@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/components/custom_loading.dart';
 import 'package:what_if/core/utils/styles.dart';
 import 'package:what_if/features/questions/presentation/manager/questions_cubit.dart';
+import '../../../../../core/utils/fonts.dart';
 import 'num_of_questions_widget.dart';
 
 class QuestionsBuilder extends StatelessWidget {
@@ -18,10 +20,16 @@ class QuestionsBuilder extends StatelessWidget {
       builder: (context, state) {
         if (state is QuestionsFailure) {
           Center(
-            child: Text(state.errorMessage),
+            child: Text(
+              state.errorMessage,
+              style: Styles.textStyle16Moul.copyWith(
+                fontFamily: context.locale.toString() == 'en'
+                    ? null
+                    : Fonts.notoSansArabicFont,
+              ),
+            ),
           );
         }
-        if (state is QuestionsSuccess) {}
         if (state is QuestionsLoading || state is QuestionsInitial) {
           return const Center(
             child: CustomLoading(
@@ -43,6 +51,9 @@ class QuestionsBuilder extends StatelessWidget {
                   '“${cubit.currentQuestion}”',
                   style: Styles.textStyle24.copyWith(
                     color: Colors.black,
+                    fontFamily: context.locale.toString() == 'en'
+                        ? null
+                        : Fonts.notoSansArabicFont,
                   ),
                   textAlign: TextAlign.center,
                 ),

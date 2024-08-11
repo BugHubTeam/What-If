@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_colors.dart';
+import 'package:what_if/core/utils/fonts.dart';
 import 'package:what_if/core/utils/styles.dart';
 
 class CustomGradientButton extends StatelessWidget {
@@ -8,10 +10,10 @@ class CustomGradientButton extends StatelessWidget {
     super.key,
     this.enableButton2 = false,
     this.onTap,
-    required this.text,
+    this.text,
     this.iconImage,
   });
-  final String text;
+  final String? text;
   final bool? enableButton2;
   final void Function()? onTap;
   final String? iconImage;
@@ -54,16 +56,50 @@ class CustomGradientButton extends StatelessWidget {
               ),
             ),
             child: Center(
-              child: iconImage == null
+              child: iconImage == null && text != null
                   ? Text(
-                      text,
-                      style: Styles.textStyle16,
+                      text!,
+                      style: Styles.textStyle16.copyWith(
+                        fontFamily: context.locale.toString() == 'en'
+                            ? null
+                            : Fonts.tajawalFont,
+                      ),
                       textAlign: TextAlign.center,
                     )
-                  : Image.asset(
-                      iconImage!,
-                      fit: BoxFit.fill,
-                    ),
+                  : iconImage != null && text != null
+                      ? Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const Spacer(flex: 1),
+                            Container(
+                              alignment: Alignment.center,
+                              // color: Colors.black,
+                              child: Image.asset(
+                                iconImage!,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            const Spacer(flex: 1),
+                            Text(
+                              text!,
+                              style: Styles.textStyle16.copyWith(
+                                fontFamily: context.locale.toString() == 'en'
+                                    ? null
+                                    : Fonts.tajawalFont,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            const Spacer(flex: 1),
+                            const SizedBox(width: 5),
+                          ],
+                        )
+                      : Center(
+                          child: Image.asset(
+                            iconImage!,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
             ),
           ),
         ),

@@ -11,7 +11,8 @@ class AppImages {
   static const String political = 'assets/images/political_category.png';
 
   static const String flagEgypt = 'assets/images/flag-egypt.png';
-  static const String flagUK = 'assets/images/flag_UK.png';
+  static const String flagUSA = 'assets/images/flag-USA.png';
   static const String ellipsRadio = 'assets/images/Ellipse_radio.png';
   static const String yesORno = 'assets/images/yesORno.png';
+  static const String replayIcon = 'assets/images/replay-icon.png';
 }

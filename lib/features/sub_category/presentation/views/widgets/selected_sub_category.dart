@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:what_if/core/utils/app_strings.dart';
@@ -7,6 +5,7 @@ import 'package:what_if/core/utils/components/custom_radio_button.dart';
 import 'package:what_if/core/utils/constants.dart';
 import 'package:what_if/core/utils/styles.dart';
 import '../../../../../core/utils/components/custom_container_with_1border.dart';
+import '../../../../../core/utils/fonts.dart';
 import '../../cubit/sub_category_cubit.dart';
 
 class SelectedSubCategory extends StatefulWidget {
@@ -32,12 +31,16 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
           child: Stack(
             alignment: const Alignment(0.8, 0),
             children: [
+              // SizedBox(width: mediaQuery.width * 0.05),
               CustomContainerWith1border(
                 text: widget.text == categoryList[0].name
                     ? AppStrings.clubs.tr()
                     : AppStrings.movies.tr(),
                 style: Styles.textStyle24Shrikh.copyWith(
                   color: Colors.white.withOpacity(isClubs ? 1 : 0.4),
+                  fontFamily: context.locale.toString() == 'en'
+                      ? null
+                      : Fonts.notoSansArabicFont,
                 ),
                 isRadialGradient: isClubs,
                 borderRadius: 24,

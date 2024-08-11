@@ -6,6 +6,7 @@ import 'package:what_if/features/how_to_play/presentation/views/widgets/custom_l
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 import '../../../../../core/utils/components/custom_gradien_widget.dart';
+import '../../../../../core/utils/fonts.dart';
 import '../../../../../core/utils/styles.dart';
 
 class HowToPlayBody extends StatelessWidget {
@@ -33,9 +34,12 @@ class HowToPlayBody extends StatelessWidget {
                     child: Text(
                       "${AppStrings.howToPlay.tr()} \n“What if”",
                       style: Styles.textStyle24.copyWith(
-                        color: Colors.white,
+                        color: Colors.black,
                         height: 1.5,
                         fontSize: 32,
+                        fontFamily: context.locale.toString() == 'en'
+                            ? null
+                            : Fonts.notoSansArabicFont,
                       ),
                       textAlign: TextAlign.center,
                     ),

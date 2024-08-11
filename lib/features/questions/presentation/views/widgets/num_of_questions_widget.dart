@@ -4,6 +4,7 @@ import 'package:what_if/core/utils/app_strings.dart';
 import 'package:what_if/core/utils/styles.dart';
 
 import '../../../../../core/utils/components/custom_divider.dart';
+import '../../../../../core/utils/fonts.dart';
 
 class NumOfQuestionsWidget extends StatelessWidget {
   const NumOfQuestionsWidget({
@@ -23,7 +24,11 @@ class NumOfQuestionsWidget extends StatelessWidget {
             children: [
               Text(
                 numberOfQuestions,
-                style: Styles.textStyle24Shrikh,
+                style: Styles.textStyle24Shrikh.copyWith(
+                  fontFamily: context.locale.toString() == 'en'
+                      ? null
+                      : Fonts.notoSansArabicFont,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -31,6 +36,9 @@ class NumOfQuestionsWidget extends StatelessWidget {
                   ' ${AppStrings.of.tr()}  ',
                   style: Styles.textStyle24Shrikh.copyWith(
                     fontSize: 12,
+                    fontFamily: context.locale.toString() == 'en'
+                        ? null
+                        : Fonts.notoSansArabicFont,
                   ),
                 ),
               ),
@@ -38,6 +46,9 @@ class NumOfQuestionsWidget extends StatelessWidget {
                 '5',
                 style: Styles.textStyle24Shrikh.copyWith(
                   fontSize: 16,
+                  fontFamily: context.locale.toString() == 'en'
+                      ? null
+                      : Fonts.notoSansArabicFont,
                 ),
               ),
             ],

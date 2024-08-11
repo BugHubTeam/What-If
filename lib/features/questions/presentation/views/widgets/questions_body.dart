@@ -11,6 +11,7 @@ import 'package:what_if/features/questions/presentation/views/widgets/yes_widget
 import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/components/custom_app_bar.dart';
 import '../../../../../core/utils/components/custom_container_with_1border.dart';
+import '../../../../../core/utils/fonts.dart';
 
 class QuestionsBody extends StatelessWidget {
   const QuestionsBody({super.key});
@@ -60,7 +61,11 @@ class QuestionsBody extends StatelessWidget {
                   child: CustomContainerWith1border(
                     text: AppStrings.whatsYourAnswer.tr(),
                     textAlign: TextAlign.center,
-                    style: Styles.textStyle16Shrikh,
+                    style: Styles.textStyle16Shrikh.copyWith(
+                      fontFamily: context.locale.toString() == 'en'
+                          ? null
+                          : Fonts.notoSansArabicFont,
+                    ),
                     isRadialGradient: true,
                     borderRadius: 30,
                     height: 0,
@@ -75,9 +80,13 @@ class QuestionsBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 75),
             child: CustomContainerWith1border(
               text: AppStrings.skipQuestion.tr(),
-              style: Styles.textStyle16,
+              style: Styles.textStyle16.copyWith(
+                fontFamily: context.locale.toString() == 'en'
+                    ? null
+                    : Fonts.notoSansArabicFont,
+              ),
               backgroundColor: const Color(0xff374179),
-              borderColor: AppColors.redDarkColor,
+              borderColor: Colors.white,
               borderRadius: 30,
               height: mediaQuery.height * 0.01,
               boxShadow: const [AppColors.selectLangBoxShadow],

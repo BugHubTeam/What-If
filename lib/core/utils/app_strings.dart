@@ -10,7 +10,7 @@ class AppStrings {
   static const String catagories = 'catagories';
   static const String footBall = 'footBall';
   static const String tv = 'tv';
-  static const String political = 'political';
+  static const String historical = 'historical';
   static const String pleaseChooseYourLanguage = 'pleaseChooseYourLanguage';
   static const String arabicEG = 'arabicEG';
   static const String englishUK = 'englishUK';

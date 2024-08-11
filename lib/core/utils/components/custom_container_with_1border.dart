@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:what_if/core/utils/app_colors.dart';
 import 'package:what_if/core/utils/styles.dart';
+
+import '../fonts.dart';
 
 class CustomContainerWith1border extends StatelessWidget {
   const CustomContainerWith1border({
@@ -86,7 +89,12 @@ class CustomContainerWith1border extends StatelessWidget {
                   padding: EdgeInsets.all(height ?? 0),
                   child: Text(
                     text,
-                    style: style ?? Styles.textStyle16,
+                    style: style ??
+                        Styles.textStyle16.copyWith(
+                          fontFamily: context.locale.toString() == 'en'
+                              ? null
+                              : Fonts.notoSansArabicFont,
+                        ),
                     textAlign: textAlign,
                   ),
                 )
