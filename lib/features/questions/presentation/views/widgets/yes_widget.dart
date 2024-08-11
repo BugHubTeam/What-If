@@ -10,6 +10,7 @@ import '../../../../../core/utils/fonts.dart';
 
 class YesWidget extends StatelessWidget {
   const YesWidget({super.key, required this.text});
+
   final String text;
 
   @override
@@ -29,13 +30,15 @@ class YesWidget extends StatelessWidget {
         children: [
           Text(
             text.tr(),
-            style: Styles.textStyle24.copyWith(
-              color: AppColors.greenDark,
-              fontSize: 32,
-              fontFamily: context.locale.toString() == 'en'
-                  ? null
-                  : Fonts.notoSansArabicFont,
-            ),
+            style: context.locale.toString() == 'en'
+                ? Styles.textStyle24.copyWith(
+                    color: AppColors.greenDark,
+                    fontSize: 32,
+                  )
+                : Styles.textStyleArabicSubTitle.copyWith(
+                    color: AppColors.greenDark,
+                    fontSize: 32,
+                  ),
           ),
           const Icon(
             Icons.check_rounded,

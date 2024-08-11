@@ -14,6 +14,7 @@ class CustomAppBar extends StatelessWidget {
     required this.title,
     this.backOnTap,
   });
+
   final String title;
   final void Function()? backOnTap;
 
@@ -42,9 +43,12 @@ class CustomAppBar extends StatelessWidget {
               child: Text(
                 title.tr(),
                 style: Styles.textStyle24.copyWith(
+                  fontWeight: context.locale.toString() == 'en'
+                      ? null
+                      : FontWeight.w900,
                   fontFamily: context.locale.toString() == 'en'
                       ? null
-                      : Fonts.notoSansArabicFont,
+                      : Fonts.tajawalFont,
                 ),
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.clip,

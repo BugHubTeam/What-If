@@ -76,8 +76,6 @@ flutter:
 
     - family: NotoSansArabic
       fonts:
-        - asset: assets/fonts/NotoSansArabic_Condensed-Bold.ttf
-        - asset: assets/fonts/NotoSansArabic_Condensed-Medium.ttf
         - asset: assets/fonts/NotoSansArabic_Condensed-Regular.ttf
 
 

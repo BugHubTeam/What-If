@@ -35,12 +35,14 @@ class NoWidget extends StatelessWidget {
           ),
           Text(
             text.tr(),
-            style: Styles.textStyle24.copyWith(
+            style: context.locale.toString() == 'en'
+                ? Styles.textStyle24.copyWith(
               color: AppColors.redDarkColor2,
               fontSize: 32,
-              fontFamily: context.locale.toString() == 'en'
-                  ? null
-                  : Fonts.notoSansArabicFont,
+            )
+                : Styles.textStyleArabicSubTitle.copyWith(
+              color: AppColors.redDarkColor2,
+              fontSize: 32,
             ),
           ),
         ],

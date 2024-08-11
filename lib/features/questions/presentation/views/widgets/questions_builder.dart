@@ -48,13 +48,11 @@ class QuestionsBuilder extends StatelessWidget {
               height: mediaQuery.height * 0.3,
               child: SingleChildScrollView(
                 child: Text(
-                  '“${cubit.currentQuestion}”',
-                  style: Styles.textStyle24.copyWith(
+                  '${cubit.currentQuestion}',
+                  style: context.locale.toString() == 'en'?
+                  Styles.textStyle24.copyWith(
                     color: Colors.black,
-                    fontFamily: context.locale.toString() == 'en'
-                        ? null
-                        : Fonts.notoSansArabicFont,
-                  ),
+                  ):Styles.textStyleArabicText,
                   textAlign: TextAlign.center,
                 ),
               ),

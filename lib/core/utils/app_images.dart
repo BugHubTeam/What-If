@@ -8,7 +8,7 @@ class AppImages {
 
   static const String footBall = 'assets/images/football_category.png';
   static const String tv = 'assets/images/TV_category.png';
-  static const String political = 'assets/images/political_category.png';
+  static const String historical = 'assets/images/Historical.png';
 
   static const String flagEgypt = 'assets/images/flag-egypt.png';
   static const String flagUSA = 'assets/images/flag-USA.png';

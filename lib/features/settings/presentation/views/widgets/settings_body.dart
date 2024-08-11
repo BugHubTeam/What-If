@@ -35,12 +35,11 @@ class SettingsBody extends StatelessWidget {
                     gradientColors: AppColors.containerBgGradientColors,
                     child: Text(
                       AppStrings.pleaseChooseYourLanguage.tr(),
-                      style: Styles.textStyle24.copyWith(
-                        color: Colors.black,
-                        fontFamily: context.locale.toString() == 'en'
-                            ? null
-                            : Fonts.notoSansArabicFont,
-                      ),
+                      style: context.locale.toString() == 'en'
+                          ? Styles.textStyle24.copyWith(
+                              color: Colors.black,
+                            )
+                          : Styles.textStyleArabicSubTitle,
                     ),
                   ),
                   const Spacer(flex: 1),
@@ -53,11 +52,13 @@ class SettingsBody extends StatelessWidget {
                     children: [
                       Text(
                         AppStrings.yourLanguagePreference.tr(),
-                        style: Styles.textStyle12.copyWith(
-                          fontFamily: context.locale.toString() == 'en'
-                              ? null
-                              : Fonts.notoSansArabicFont,
-                        ),
+                        style: context.locale.toString() == 'en'
+                            ? Styles.textStyle12.copyWith(
+                                fontFamily: context.locale.toString() == 'en'
+                                    ? null
+                                    : Fonts.notoSansArabicFont,
+                              )
+                            : Styles.textStyleArabicText.copyWith(fontSize: 14),
                         textAlign: TextAlign.center,
                       ),
                     ],

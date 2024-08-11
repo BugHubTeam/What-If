@@ -16,7 +16,7 @@ List<CategoryModel> categoryList = [
   ),
   CategoryModel(
     name: AppStrings.historical,
-    image: AppImages.political,
+    image: AppImages.historical,
     onTap: () {},
   ),
 ];

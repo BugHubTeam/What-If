@@ -55,11 +55,12 @@ class CategoryItem extends StatelessWidget {
             children: [
               Text(
                 categoryModel.name.tr(),
-                style: Styles.textStyle24.copyWith(
+                style:context.locale.toString() == 'en'?
+                Styles.textStyle24.copyWith(
                   fontFamily: context.locale.toString() == 'en'
                       ? Fonts.zenDotsFontFamily
                       : Fonts.notoSansArabicFont,
-                ),
+                ):Styles.textStyleArabicSubTitle.copyWith(color: Colors.white,),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 44),

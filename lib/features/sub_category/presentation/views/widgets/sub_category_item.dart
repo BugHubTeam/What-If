@@ -13,6 +13,7 @@ class SubCategoryItem extends StatelessWidget {
     required this.isSelected,
     this.subCategoryEntity,
   });
+
   final bool isSelected;
   final SubCategoryEntity? subCategoryEntity;
 
@@ -81,12 +82,25 @@ class SubCategoryItem extends StatelessWidget {
                   ),
                 ),
           child: Text(
-            subCategoryEntity?.name ?? ' Barcelona',
-            style: Styles.textStyle16Shrikh.copyWith(
-              color: categoryName == AppStrings.footBall
-                  ? Colors.black.withOpacity(isSelected ? 1 : 0.5)
-                  : Colors.white.withOpacity(isSelected ? 1 : 0.5),
-            ),
+            subCategoryEntity!.name.length > 16 &&
+                    categoryName == AppStrings.footBall
+                ? subCategoryEntity?.name ?? ' Not Found'
+                : subCategoryEntity!.name.length > 16
+                    ? "${subCategoryEntity?.name.substring(0, 14)}..."
+                    : subCategoryEntity?.name ?? ' Not Found',
+            style: subCategoryEntity!.name.length > 16 &&
+                    categoryName == AppStrings.footBall
+                ? Styles.textStyle16Shrikh.copyWith(
+                    fontSize: 13,
+                    color: categoryName == AppStrings.footBall
+                        ? Colors.black.withOpacity(isSelected ? 1 : 0.5)
+                        : Colors.white.withOpacity(isSelected ? 1 : 0.5),
+                  )
+                : Styles.textStyle16Shrikh.copyWith(
+                    color: categoryName == AppStrings.footBall
+                        ? Colors.black.withOpacity(isSelected ? 1 : 0.5)
+                        : Colors.white.withOpacity(isSelected ? 1 : 0.5),
+                  ),
             textAlign: TextAlign.center,
           ),
         )

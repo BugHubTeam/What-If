@@ -56,4 +56,27 @@ class Styles {
     fontWeight: FontWeight.w400,
     color: Colors.black,
   );
+
+  static const TextStyle textStyleArabicTitle = TextStyle(
+    fontFamily: Fonts.tajawalFont,
+    fontSize: 24,
+    fontWeight: FontWeight.w900,
+    color: Colors.black,
+  );
+
+  static const TextStyle textStyleArabicSubTitle = TextStyle(
+    fontFamily: Fonts.notoSansArabicFont,
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+
+static const TextStyle textStyleArabicText = TextStyle(
+    fontFamily: Fonts.tajawalFont,
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+  );
+
+
 }

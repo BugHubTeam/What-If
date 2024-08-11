@@ -12,6 +12,7 @@ class CustomLearnItem extends StatelessWidget {
     required this.subTitle,
     this.enableDivider = true,
   });
+
   final String title;
   final String subTitle;
   final bool? enableDivider;
@@ -23,23 +24,26 @@ class CustomLearnItem extends StatelessWidget {
         const SizedBox(height: 6),
         Text(
           title.tr(),
-          style: Styles.textStyle24.copyWith(
-            color: AppColors.primaryColor,
-            fontFamily: context.locale.toString() == 'en'
-                ? Fonts.zenDotsFontFamily
-                : Fonts.notoSansArabicFont,
-          ),
+          style: context.locale.toString() == 'en'
+              ? Styles.textStyle24.copyWith(
+                  color: AppColors.primaryColor,
+                  fontFamily: context.locale.toString() == 'en'
+                      ? Fonts.zenDotsFontFamily
+                      : Fonts.notoSansArabicFont,
+                )
+              : Styles.textStyleArabicSubTitle
+                  .copyWith(color: AppColors.arabicColor),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 6),
         Text(
           subTitle.tr(),
-          style: Styles.textStyle16.copyWith(
-            color: Colors.black,
-            fontFamily: context.locale.toString() == 'en'
-                ? Fonts.zenDotsFontFamily
-                : Fonts.tajawalFont,
-          ),
+          style: context.locale.toString() == 'en'
+              ? Styles.textStyle16.copyWith(
+                  color: Colors.black,
+                  fontFamily: Fonts.zenDotsFontFamily,
+                )
+              : Styles.textStyleArabicText,
           textAlign: TextAlign.center,
         ),
 

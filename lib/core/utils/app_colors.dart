@@ -114,4 +114,6 @@ class AppColors {
   static const Color redDarkColor = Color(0XFFC10F0F);
   static const Color redDarkColor2 = Color(0XFFCF1B13);
   static const Color greenDark = Color(0XFF1B6D3F);
+  static const Color arabicColor = Color(0XFF310F72);
+
 }

@@ -31,12 +31,10 @@ class StoryBuilder extends StatelessWidget {
         if (state is StorySuccess) {
           return SingleChildScrollView(
             child: Text(
-              '“${state.story}”',
-              style: Styles.textStyle16Moul.copyWith(
-                fontFamily: context.locale.toString() == 'en'
-                    ? null
-                    : Fonts.notoSansArabicFont,
-              ),
+              '${state.story}',
+              style: context.locale.toString() == 'en'?
+              Styles.textStyle16Moul.copyWith(
+              ):Styles.textStyleArabicText,
               textAlign: TextAlign.center,
             ),
           );

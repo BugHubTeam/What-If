@@ -61,11 +61,12 @@ class QuestionsBody extends StatelessWidget {
                   child: CustomContainerWith1border(
                     text: AppStrings.whatsYourAnswer.tr(),
                     textAlign: TextAlign.center,
-                    style: Styles.textStyle16Shrikh.copyWith(
-                      fontFamily: context.locale.toString() == 'en'
-                          ? null
-                          : Fonts.notoSansArabicFont,
-                    ),
+                    style: context.locale.toString() == 'en'
+                        ? Styles.textStyle16Shrikh.copyWith()
+                        : Styles.textStyleArabicText.copyWith(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                     isRadialGradient: true,
                     borderRadius: 30,
                     height: 0,
@@ -80,11 +81,12 @@ class QuestionsBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 75),
             child: CustomContainerWith1border(
               text: AppStrings.skipQuestion.tr(),
-              style: Styles.textStyle16.copyWith(
-                fontFamily: context.locale.toString() == 'en'
-                    ? null
-                    : Fonts.notoSansArabicFont,
-              ),
+              style: context.locale.toString() == 'en'
+                  ? Styles.textStyle16.copyWith()
+                  : Styles.textStyleArabicText.copyWith(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
               backgroundColor: const Color(0xff374179),
               borderColor: Colors.white,
               borderRadius: 30,

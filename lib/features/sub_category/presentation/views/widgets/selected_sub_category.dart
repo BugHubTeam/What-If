@@ -13,6 +13,7 @@ class SelectedSubCategory extends StatefulWidget {
     super.key,
     required this.text,
   });
+
   final String text;
 
   @override
@@ -21,6 +22,7 @@ class SelectedSubCategory extends StatefulWidget {
 
 class _SelectedSubCategoryState extends State<SelectedSubCategory> {
   bool isClubs = true;
+
   @override
   Widget build(BuildContext context) {
     final subCategoryCubit = SubCategoryCubit.get(context);
@@ -36,12 +38,16 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                 text: widget.text == categoryList[0].name
                     ? AppStrings.clubs.tr()
                     : AppStrings.movies.tr(),
-                style: Styles.textStyle24Shrikh.copyWith(
-                  color: Colors.white.withOpacity(isClubs ? 1 : 0.4),
-                  fontFamily: context.locale.toString() == 'en'
-                      ? null
-                      : Fonts.notoSansArabicFont,
-                ),
+                style: context.locale.toString() == 'en'
+                    ? Styles.textStyle24Shrikh.copyWith(
+                        color: Colors.white.withOpacity(isClubs ? 1 : 0.4),
+                        fontFamily: context.locale.toString() == 'en'
+                            ? null
+                            : Fonts.notoSansArabicFont,
+                      )
+                    : Styles.textStyleArabicSubTitle.copyWith(
+                        color: Colors.white.withOpacity(isClubs ? 1 : 0.4),
+                      ),
                 isRadialGradient: isClubs,
                 borderRadius: 24,
                 height: 8,
@@ -85,9 +91,15 @@ class _SelectedSubCategoryState extends State<SelectedSubCategory> {
                   children: [
                     CustomContainerWith1border(
                       text: AppStrings.players.tr(),
-                      style: Styles.textStyle24Shrikh.copyWith(
-                        color: Colors.white.withOpacity(isClubs ? 0.4 : 1),
-                      ),
+                      style: context.locale.toString() == 'en'
+                          ? Styles.textStyle24Shrikh.copyWith(
+                              color:
+                                  Colors.white.withOpacity(isClubs ? 0.4 : 1),
+                            )
+                          : Styles.textStyleArabicSubTitle.copyWith(
+                              color:
+                                  Colors.white.withOpacity(isClubs ? 0.4 : 1),
+                            ),
                       isRadialGradient: isClubs,
                       borderWidth: isClubs ? 0 : null,
                       borderRadius: 24,
