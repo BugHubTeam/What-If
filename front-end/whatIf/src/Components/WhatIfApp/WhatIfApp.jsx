@@ -1,7 +1,7 @@
 import React from 'react'
 import appleLogo from '../../assets/appleLogo.svg'
 import googleLogo from '../../assets/googlePlayLogo.svg'
-import qrCode from '../../assets/qrCode.png'
+import qrCode from '../../assets/what if - media fire link.png'
 import whatIfImage from '../../assets/whatIfImage.png'
 
 export default function WhatIfApp() {
