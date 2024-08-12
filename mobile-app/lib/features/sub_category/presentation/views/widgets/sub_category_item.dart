@@ -24,6 +24,7 @@ class SubCategoryItem extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         Container(
+          alignment: Alignment.topCenter,
           padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
@@ -53,7 +54,9 @@ class SubCategoryItem extends StatelessWidget {
                     : 0,
               ),
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.203,
+              height: categoryName == AppStrings.footBall
+                  ? MediaQuery.of(context).size.height * 0.203
+                  : null,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: CachedNetworkImage(
