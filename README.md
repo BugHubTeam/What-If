@@ -12,7 +12,7 @@
 Each component has its own README file with detailed instructions for setup, installation, and running the project. Refer to the specific README files in each directory for more information:
 - [Mobile App README](./mobile-app/README.md)
 - [Back-End README](./back-end/README.md) 
-- [Front-End README](./front-end/README.md)
+- [Front-End README](./front-end/whatIf/README.md)
 
 ## Features
 - **Diverse Categories**: Choose from a wide range of categories, including Football, Movies, and more.
