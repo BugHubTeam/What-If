@@ -1,4 +1,4 @@
-# What If - React Project
+# *[What If](https://main--whatif-bughub.netlify.app/)* - React Project
 
 ## Project Overview
 
@@ -65,7 +65,6 @@ Ensure that you have the following software installed:
 
    ```bash
    git clone https://github.com/your-username/what_if.git
-   cd what-if
    ```
 
  2. **Install Dependencies**
@@ -82,7 +81,7 @@ npm install
 npm start
 ```
 
-###Contributors
+### Contributors
 Thanks to these wonderful people who have contributed to this project:
 
  - *[omer bag](https://github.com/omerbag-9)*  - Technical Leader
