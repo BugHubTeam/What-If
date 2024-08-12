@@ -67,7 +67,7 @@ Each component has its own README file with detailed instructions for setup, ins
 To help you better understand how to play **What If?!**, here are some screenshots from the app:
 
 ### Home Screen
-<img src="./assets/HomeScreen.jpg" alt="Home Screen" width="600"/>
+<img src="./assets/HomeScreen.jpg" alt="Home Screen" width="250"/>
 *The main screen where you can select a category to begin your journey into alternate realities.*
 
 ### Setting Screen
