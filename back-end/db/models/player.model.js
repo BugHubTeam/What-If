@@ -2,7 +2,7 @@ import mongoose, { model, Schema } from "mongoose"
 
 // schema
 const playerSchema = new mongoose.Schema({
-    player:{
+    name:{
         String,
     },
     player_logo:{
@@ -12,7 +12,7 @@ const playerSchema = new mongoose.Schema({
         type:Schema.Types.ObjectId,
         ref:'Category',
     }
-})
+},{timestamps:true})
 
 // model
 export const Player = model('Player' , playerSchema)
