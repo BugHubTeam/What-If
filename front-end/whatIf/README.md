@@ -68,7 +68,7 @@ Ensure that you have the following software installed:
    cd what-if
    ```
 
- 2. **Install Dependencies
+ 2. **Install Dependencies**
 
 Navigate to the project directory and install the necessary dependencies:
 
@@ -76,7 +76,7 @@ Navigate to the project directory and install the necessary dependencies:
 npm install
 ```
 
-3. **Run project
+3. **Run project**
 
 ```bash
 npm start
